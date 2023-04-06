@@ -1,0 +1,42 @@
+$colors: (
+	green-deepest: #57a41b,
+	green-deep: #74c733,
+	green-soft: #98dd62,
+	green-softest: #d6f2c0,
+
+	blue-deepest: #1b62a4,
+	blue-deep: #337fc7,
+	blue-soft: #62a2dd,
+	blue-softest: #bed9f1,
+
+	red-deepest: #c93329,
+	red-deep: #f95c3a,
+	red-soft: #ff9559,
+	red-softest: #f2d2c0,
+
+	yellow-deepest: #a89b23,
+	yellow-deep: #f9cf3a,
+	yellow-soft: #f2f453,
+	yellow-softest: #feffc8,
+
+	black-16: #161516,
+	black-34: #343439,
+
+	gray-59: #595866,
+	gray-88: #88879b,
+	gray-c6: #c6c5d2,
+	gray-e1: #e1e1e7,
+	gray-f5: #f5f4f8,
+
+	white: #ffffff,
+	green-gradient: linear-gradient(180deg, #74c733 0%, #57a41b 100%),
+);
+:root {
+	// each item in color map
+	@each $name, $color in $colors {
+		--color-#{$name}: #{$color};
+	}
+}
+@function color($color-name) {
+	@return var(--color-#{$color-name});
+}
