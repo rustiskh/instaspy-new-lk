@@ -1,0 +1,16 @@
+.auth-register-block {
+	margin-top: 36px;
+
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+		margin-bottom: 16px;
+	}
+
+	&__btn {
+		max-width: 340px;
+		width: 100%;
+	}
+}

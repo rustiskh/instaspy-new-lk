@@ -1,0 +1,33 @@
+@import "mixins/mixins-media";
+@import "general/colors";
+@import "general/buttons";
+@import "general/inputs";
+@import "general/tail";
+@import "../components/general/header/header";
+@import "../components/general/footer/footer";
+
+@import "../components/blocks/auth-page/auth-block/auth-block";
+@import "../components/blocks/auth-page/auth-additional/auth-additional";
+@import "../components/blocks/auth-page/auth-register-block/auth-register-block";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Source Sans Pro", "Inter", sans-serif;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1114px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.canvas {
+	padding: 36px 10px 0px 10px;
+}

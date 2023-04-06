@@ -1,0 +1,33 @@
+.tail {
+	padding: 12px 16px;
+	background: color(gray-f5);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+
+	@include laptop {
+		max-width: 456px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+		margin-bottom: 16px;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+	}
+
+	&__error {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		color: color(red-deepest);
+	}
+}
