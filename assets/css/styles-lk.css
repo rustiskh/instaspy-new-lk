@@ -23,6 +23,7 @@
   --color-gray-e1: #e1e1e7;
   --color-gray-f5: #f5f4f8;
   --color-white: #ffffff;
+  --color-footer-gray: #f3f3f9;
   --color-green-gradient: linear-gradient(180deg, #74c733 0%, #57a41b 100%);
 }
 
@@ -377,6 +378,89 @@
   line-height: 24px;
   text-align: center;
   color: var(--color-black-16);
+}
+
+.footer {
+  background: var(--color-footer-gray);
+}
+.footer .container {
+  padding: 34px 10px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1114px) {
+  .footer .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.footer__copywrite-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+.footer .footer__logo-img {
+  margin-right: 8px;
+}
+.footer .footer__logo-img svg {
+  width: 25px;
+}
+.footer .footer__logo-img svg path {
+  fill: var(--color-gray-59);
+}
+.footer__copywrite-text, .footer__copywrite-link {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: var(--color-gray-59);
+}
+.footer__links-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+.footer__link {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--color-gray-59);
+  margin-bottom: 8px;
+}
+.footer__link:last-child {
+  margin-bottom: 0;
+}
+.footer__disclaimer {
+  max-width: 344px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  color: var(--color-gray-88);
 }
 
 @media (min-width: 1114px) {
