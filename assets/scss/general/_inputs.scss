@@ -1,0 +1,53 @@
+.general-input {
+	padding: 12px 0px 11px 24px;
+	border-radius: 12px;
+	border: 1px solid color(gray-88);
+
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 17px;
+	color: color(black-16);
+
+	transition: all 0.2s ease;
+
+	&::placeholder {
+		color: color(gray-c6);
+	}
+
+	&:hover {
+		border-color: color(green-deep);
+
+		&::placeholder {
+			color: color(gray-59);
+		}
+	}
+
+	&:focus {
+		outline: none;
+		border-color: color(gray-59);
+		box-shadow: none;
+	}
+
+	&:disabled {
+		background: color(gray-f5);
+		border-color: color(gray-e1);
+		color: color(gray-c6);
+		cursor: not-allowed;
+
+		&:hover {
+			&::placeholder {
+				color: color(gray-c6);
+			}
+		}
+	}
+
+	&.error {
+		border-color: color(red-deepest);
+		color: color(red-deepest);
+	}
+
+	&.success {
+		border-color: color(green-deep);
+		color: color(green-deep);
+	}
+}

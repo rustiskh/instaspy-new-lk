@@ -1,0 +1,60 @@
+.header {
+	min-height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0px 30px 35px rgba(198, 197, 210, 0.15), 0px 15px 20px rgba(198, 197, 210, 0.2), 0px 4px 10px rgba(198, 197, 210, 0.35);
+
+	.container {
+		position: relative;
+		padding-left: 32px;
+		padding-right: 28px;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_auth {
+		.header__logo-text {
+			display: block;
+		}
+	}
+
+	&__logo {
+		&-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		&-img {
+			margin-right: 9px;
+			height: 34px;
+		}
+
+		&-text {
+			height: 28px;
+			display: none;
+
+			@include laptop {
+				display: block;
+			}
+		}
+	}
+
+	&__page-title {
+		width: 190px;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 24px;
+
+		text-align: center;
+
+		color: color(black-16);
+	}
+}

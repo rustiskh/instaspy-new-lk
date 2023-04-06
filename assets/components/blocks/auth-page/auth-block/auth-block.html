@@ -1,0 +1,27 @@
+<!-- Блок авторизации. Инпуты, при добавлении классов error или success изменяют стили. 
+Кнопка Войти получает класс error при ошибке валидации данных -->
+<div class="auth-block tail">
+	<h2 class="auth-block__title tail__title">Вход</h2>
+	<p class="auth-block__text tail__text">Введите логин и пароль, которые вы использовали для регистрации на Инсташпионе</p>
+	<div class="auth-block__form-wrapper form">
+		<input type="email" class="general-input auth-block__input" placeholder="Введите e-mail" />
+		<input type="password" class="general-input auth-block__input" placeholder="Введите пароль" />
+		<button class="button button_shadow auth-block__btn">войти</button>
+		<p class="auth-block__form-error tail__error">Текст ошибки отображается здесь</p>
+	</div>
+	<p class="auth-block__text tail__text">или войдите с помощью аккаунта:</p>
+	<div class="auth-block__social-wrapper">
+		<div class="auth-block__social-item">
+			<img role="button" title="VKontakte" src="assets/icons/auth-social/auth-icon_vk.svg" alt="VK" class="auth-block__social-icon" />
+		</div>
+		<div class="auth-block__social-item">
+			<img role="button" title="Google" src="assets/icons/auth-social/auth-icon_google.svg" alt="Google" class="auth-block__social-icon" />
+		</div>
+		<div class="auth-block__social-item">
+			<img role="button" title="Mail.ru" src="assets/icons/auth-social/auth-icon_mailru.svg" alt="Mail.ru" class="auth-block__social-icon" />
+		</div>
+		<div class="auth-block__social-item">
+			<img role="button" title="Одноклассники" src="assets/icons/auth-social/auth-icon_odnoklassniki.svg" alt="OK" class="auth-block__social-icon" />
+		</div>
+	</div>
+</div>
