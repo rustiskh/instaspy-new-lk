@@ -10,6 +10,10 @@
 
 	transition: all 0.2s ease;
 
+	@include laptop {
+		padding: 14px 0px 15px 24px;
+	}
+
 	&::placeholder {
 		color: color(gray-c6);
 	}
@@ -49,5 +53,138 @@
 	&.success {
 		border-color: color(green-deep);
 		color: color(green-deep);
+	}
+}
+
+.input-with-loader {
+	.general-input {
+	}
+	position: relative;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+		background-image: url("../icons/Loader.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&.loading {
+		&::after {
+			display: block;
+		}
+	}
+}
+
+.custom-select {
+	position: relative;
+
+	&__field-wrapper {
+		position: relative;
+	}
+
+	&__input {
+		width: 100%;
+	}
+
+	&__loader {
+		display: none;
+		position: absolute;
+		top: 30%;
+		right: 10px;
+		width: 18px;
+		height: 18px;
+		background-image: url("../icons/loader_green.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		animation: rotation 2s ease infinite;
+		@keyframes rotation {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	&__list-wrapper {
+		position: absolute;
+		top: calc(100% + 5px);
+		width: 100%;
+		display: none;
+		background: color(white);
+		border: 1px solid color(gray-e1);
+		border-radius: 12px;
+		overflow: hidden;
+
+		max-height: 200px;
+		overflow-y: auto;
+
+		/* Скрытие стрелок */
+		&::-webkit-scrollbar-button {
+			display: none;
+		}
+
+		/* Скрытие подложки */
+		&::-webkit-scrollbar-track {
+			display: none;
+		}
+
+		/* Ширина и цвет ползунка в Firefox */
+		scrollbar-color: color(green-softest);
+		scrollbar-width: thin;
+
+		/* Скрытие стрелок и подложки в Firefox */
+
+		scrollbar-arrow-color: transparent;
+		scrollbar-track-color: transparent;
+
+		// Стили для chrome
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			background-color: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: color(green-softest);
+			width: 4px;
+			border-radius: 6px;
+		}
+	}
+
+	&__list {
+		list-style: none;
+
+		&_users {
+			.custom-select__list-item {
+				padding: 8px 0 8px 24px;
+
+				&:hover {
+					background-color: color(green-softest);
+				}
+			}
+
+			.custom-select__list-item-img-wrapper {
+				margin-right: 8px;
+			}
+
+			.custom-select__list-item-name {
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 17px;
+				color: color(gray-59);
+			}
+		}
+	}
+
+	&__list-item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
 	}
 }

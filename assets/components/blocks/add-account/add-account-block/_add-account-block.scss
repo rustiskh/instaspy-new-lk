@@ -1,0 +1,28 @@
+.add-account-block {
+	@include laptop {
+		max-width: 340px;
+	}
+
+	&__text {
+		margin-bottom: 16px;
+	}
+
+	&__select {
+		margin-bottom: 16px;
+	}
+
+	&__btn {
+		margin-bottom: 16px;
+
+		&_loading {
+			svg {
+				animation: rotation 2s ease infinite;
+				@keyframes rotation {
+					to {
+						transform: rotate(360deg);
+					}
+				}
+			}
+		}
+	}
+}

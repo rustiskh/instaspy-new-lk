@@ -1,0 +1,96 @@
+<!-- Начальное состояние блока Добавление аккаунта + состояние загрузки, при вводе логина -->
+<section class="add-account-block tail">
+	<h2 class="add-account-block__title tail__title">Анализ активности</h2>
+	<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
+	<div class="add-account-block__form-wrapper form" id="add-account-form">
+		<div class="custom-select add-account-block__select">
+			<div class="custom-select__field-wrapper">
+				<input type="text" class="general-input custom-select__input add-account-block__input" placeholder="@username или ссылка" />
+				<span class="custom-select__loader"></span>
+			</div>
+			<div class="custom-select__list-wrapper">
+				<ul class="custom-select__list custom-select__list_users">
+					<li class="custom-select__list-item">
+						<div class="custom-select__list-item-img-wrapper">
+							<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
+						</div>
+						<p class="custom-select__list-item-name">${login}</p>
+					</li>
+					<li class="custom-select__list-item">
+						<div class="custom-select__list-item-img-wrapper">
+							<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
+						</div>
+						<p class="custom-select__list-item-name">${login}</p>
+					</li>
+					<li class="custom-select__list-item">
+						<div class="custom-select__list-item-img-wrapper">
+							<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
+						</div>
+						<p class="custom-select__list-item-name">${login}</p>
+					</li>
+					<li class="custom-select__list-item">
+						<div class="custom-select__list-item-img-wrapper">
+							<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
+						</div>
+						<p class="custom-select__list-item-name">${login}</p>
+					</li>
+					<li class="custom-select__list-item">
+						<div class="custom-select__list-item-img-wrapper">
+							<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
+						</div>
+						<p class="custom-select__list-item-name">${login}</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<button class="button button_icon-text button_shadow add-account-block__btn">
+			<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M4 20.5V19.5C4 16.7386 6.23858 14.5 9 14.5H12.75M17.5355 14.4645V18M17.5355 18V21.5355M17.5355 18H21.0711M17.5355 18H14M15 7.5C15 9.70914 13.2091 11.5 11 11.5C8.79086 11.5 7 9.70914 7 7.5C7 5.29086 8.79086 3.5 11 3.5C13.2091 3.5 15 5.29086 15 7.5Z" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			Добавить аккаунт
+		</button>
+	</div>
+</section>
+
+<!-- Состояние блока Доабвление аккаунта при поиске и добавлении аккаунта здесь в button добавлен span для смены статусов внутри кнопки-->
+<section class="add-account-block tail">
+	<h2 class="add-account-block__title tail__title">Анализ активности</h2>
+	<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
+	<div class="add-account-block__form-wrapper form" id="add-account-form">
+		<div class="custom-select add-account-block__select">
+			<div class="custom-select__field-wrapper">
+				<input type="text" class="general-input custom-select__input add-account-block__input" placeholder="@username или ссылка" value="@cheitoaccount" />
+			</div>
+		</div>
+
+		<button disabled class="button button_icon-text button_shadow add-account-block__btn add-account-block__btn_loading">
+			<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M2.6665 16.0001C2.6665 23.3641 8.63584 29.3334 15.9998 29.3334C23.3638 29.3334 29.3332 23.3641 29.3332 16.0001C29.3332 8.63608 23.3638 2.66675 15.9998 2.66675" stroke="#595866" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Добавить аккаунт</span>
+		</button>
+	</div>
+</section>
+
+<!-- Состояние ошибки блока -->
+<section class="add-account-block tail">
+	<h2 class="add-account-block__title tail__title">Анализ активности</h2>
+	<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
+	<div class="add-account-block__form-wrapper form" id="add-account-form">
+		<div class="custom-select add-account-block__select">
+			<div class="custom-select__field-wrapper">
+				<input
+					type="text"
+					class="general-input custom-select__input add-account-block__input error"
+					placeholder="@username или ссылка"
+					value="@cheitoaccount
+                "
+				/>
+			</div>
+		</div>
+
+		<button class="button button_icon-text button_shadow add-account-block__btn error">Ошибка</button>
+		<p class="add-account-block__form-error tail__error">Текст ошибки отображается здесь</p>
+	</div>
+</section>
