@@ -6,9 +6,15 @@
 @import "../components/general/header/header";
 @import "../components/general/footer/footer";
 
+// Страница авторизации
 @import "../components/blocks/auth-page/auth-block/auth-block";
 @import "../components/blocks/auth-page/auth-additional/auth-additional";
 @import "../components/blocks/auth-page/auth-register-block/auth-register-block";
+
+// Страница восстановления пароля
+@import "../components/blocks/auth-recovery/password-recovery-block/password-recovery-block";
+@import "../components/blocks/auth-recovery/password-recovery-additional/password-recovery-additional";
+@import "../components/blocks/auth-recovery/new-password-block/new-password-block";
 
 * {
 	margin: 0;

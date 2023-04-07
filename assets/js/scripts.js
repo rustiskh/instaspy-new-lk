@@ -9,13 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         inputs.forEach(input => {
 
+
             input.addEventListener('input', () => {
-                if (inputs[0].value === '' || inputs[1].value === '') {
+                if (inputs.value == '') {
                     button.disabled = true;
                 } else {
                     button.disabled = false;
                 }
             });
+
+            // input.addEventListener('input', () => {
+            //     if (inputs[0].value === '' || inputs[1].value === '') {
+            //         button.disabled = true;
+            //     } else {
+            //         button.disabled = false;
+            //     }
+            // });
         });
     });
 });

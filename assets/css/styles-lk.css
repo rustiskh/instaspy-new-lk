@@ -43,6 +43,11 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+@media (min-width: 1114px) {
+  .button {
+    padding: 12px 24px 11px;
+  }
+}
 .button:disabled {
   background: var(--color-gray-f5);
   color: var(--color-gray-c6);
@@ -307,6 +312,15 @@
   line-height: 20px;
   color: var(--color-black-16);
 }
+.tail .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .tail__error {
   font-weight: 400;
   font-size: 14px;
@@ -476,15 +490,6 @@
 .auth-block__text {
   margin-bottom: 16px;
 }
-.auth-block__form-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 .auth-block__form-error {
   margin-bottom: 16px;
 }
@@ -544,6 +549,36 @@
 .auth-register-block__btn {
   max-width: 340px;
   width: 100%;
+}
+
+@media (min-width: 1114px) {
+  .password-recovery-block {
+    max-width: 340px;
+  }
+}
+.password-recovery-block__text {
+  margin-bottom: 16px;
+}
+.password-recovery-block__input {
+  margin-bottom: 16px;
+}
+.password-recovery-block__btn {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1114px) {
+  .new-password-block {
+    max-width: 340px;
+  }
+}
+.new-password-block__text {
+  margin-bottom: 16px;
+}
+.new-password-block__input {
+  margin-bottom: 16px;
+}
+.new-password-block__btn {
+  margin-bottom: 16px;
 }
 
 * {
