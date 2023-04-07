@@ -69,38 +69,39 @@
 		</header>
 
 		<section class="canvas">
-			<section class="auth-block tail">
-				<h2 class="auth-block__title tail__title">Вход</h2>
-				<p class="auth-block__text tail__text">Введите логин и пароль, которые вы использовали для регистрации на Инсташпионе</p>
-				<div class="auth-block__form-wrapper form">
-					<input type="email" class="general-input auth-block__input" placeholder="Введите e-mail" />
-					<input type="password" class="general-input auth-block__input" placeholder="Введите пароль" />
-					<button class="button button_shadow auth-block__btn">войти</button>
-					<p class="auth-block__form-error tail__error">Текст ошибки отображается здесь</p>
+			<!-- восстановление пароля, форма отправки шаг1 идет вместе с password-recovery-additional -->
+			<section class="password-recovery-block tail">
+				<h2 class="password-recovery-block__title tail__title">Восстановление пароля</h2>
+				<p class="password-recovery-block__text tail__text">Сбросить пароль и выслать новый на указанный адрес</p>
+				<div class="password-recovery-block__form-wrapper form">
+					<input type="email" class="general-input password-recovery-block__input" placeholder="Введите e-mail указанный при регистрации" />
+					<button class="button button_shadow password-recovery-block__btn">продолжить</button>
+					<p class="password-recovery-block__form-error tail__error">Текст ошибки отображается здесь</p>
 				</div>
-				<p class="auth-block__text tail__text">или войдите с помощью аккаунта:</p>
-				<div class="auth-block__social-wrapper">
-					<div class="auth-block__social-item">
-						<img role="button" title="VKontakte" src="assets/icons/auth-social/auth-icon_vk.svg" alt="VK" class="auth-block__social-icon" />
-					</div>
-					<div class="auth-block__social-item">
-						<img role="button" title="Google" src="assets/icons/auth-social/auth-icon_google.svg" alt="Google" class="auth-block__social-icon" />
-					</div>
-					<div class="auth-block__social-item">
-						<img role="button" title="Mail.ru" src="assets/icons/auth-social/auth-icon_mailru.svg" alt="Mail.ru" class="auth-block__social-icon" />
-					</div>
-					<div class="auth-block__social-item">
-						<img role="button" title="Одноклассники" src="assets/icons/auth-social/auth-icon_odnoklassniki.svg" alt="OK" class="auth-block__social-icon" />
-					</div>
-				</div>
+			</section>
+			<section class="password-recovery-additional">
+				<a href="/site/password-reset?language=ru-RU&url=https://instashpion.ru/auth/login&backUrl=https://instashpion.ru&redirectUrl=/instashpion/dashboard&theme=spy&service=spy&type=iframe&is_new_login=1" class="button button_textual password-recovery-additional__btn">Назад</a>
 			</section>
 
-			<section class="auth-additional">
-				<a href="/site/password-reset?language=ru-RU&url=https://instashpion.ru/auth/login&backUrl=https://instashpion.ru&redirectUrl=/instashpion/dashboard&theme=spy&service=spy&type=iframe&is_new_login=1" class="button button_textual auth-additional__btn">Не могу войти</a>
+			<!-- восстановление пароля, ссылка ушла, форма отправки шаг2 -->
+			<section class="password-recovery-block tail">
+				<h2 class="password-recovery-block__title tail__title">Восстановление пароля</h2>
+				<p class="password-recovery-block__text tail__text">Письмо с инструкцией отправлено на указанный адрес</p>
+				<button class="button button_shadow password-recovery-block__btn">назад</button>
 			</section>
-			<section class="auth-register-block">
-				<h3 class="auth-register-block__title">Впервые у нас?</h3>
-				<a href="https://auth.zengram.ru/site/signup?language=ru-RU&url=https://instashpion.ru/auth/login&backUrl=https://instashpion.ru&redirectUrl=/instashpion/dashboard&theme=spy&service=spy&type=iframe&is_new_login=1" class="button button_ghost auth-register-block__btn">зарегистрируйтесь</a>
+
+			<!-- Восстановление пароля, новый пароль, шаг 3 -->
+			<section class="new-password-block tail">
+				<h2 class="new-password-block__title tail__title">Новый пароль</h2>
+				<p class="new-password-block__text tail__text">Укажите новый пароль, который вы будете использовать для авторизации</p>
+				<div class="new-password-block__form-wrapper form">
+					<input type="password" class="general-input new-password-block__input" placeholder="Укажите новый пароль" />
+					<button class="button button_shadow new-password-block__btn">продолжить</button>
+					<p class="new-password-block__form-error tail__error">Текст ошибки отображается здесь</p>
+				</div>
+			</section>
+			<section class="new-password-block-additional">
+				<a href="/site/password-reset?language=ru-RU&url=https://instashpion.ru/auth/login&backUrl=https://instashpion.ru&redirectUrl=/instashpion/dashboard&theme=spy&service=spy&type=iframe&is_new_login=1" class="button button_textual new-password-block-additional__btn">Назад</a>
 			</section>
 		</section>
 
@@ -129,42 +130,6 @@
 				<div class="footer__disclaimer">* Принадлежит организации Meta, признанная судом в РФ экстремистской. Данные меры судебной защиты не ограничивают действий по использованию программных продуктов компании Meta физических и юридических лиц, не принимающих участия в запрещенной законом деятельности.</div>
 			</div>
 		</footer>
-
-		<!-- <div class="buttons-example">
-			<button class="button button_shadow" style="margin-top: 20px">test</button>
-			<button disabled class="button button_shadow" style="margin-top: 20px">test</button>
-			<button disabled class="button button_ghost" style="margin-top: 20px">test</button>
-			<button disabled class="button button_textual" style="margin-top: 20px">test</button>
-			<button disabled class="button button_textual button_error" style="margin-top: 20px">test</button>
-			<button disabled class="button button_icon-text button_shadow" style="margin-top: 20px">
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.77778 10.7222V18.5C5.77778 19.6046 6.67321 20.5 7.77778 20.5H12M5.77778 10.7222L11.2929 5.20711C11.6834 4.81658 12.3166 4.81658 12.7071 5.20711L17.5 10M5.77778 10.7222L4 12.5M18.2222 10.7222V18.5C18.2222 19.6046 17.3268 20.5 16.2222 20.5H12M18.2222 10.7222L20 12.5M18.2222 10.7222L17.5 10M17.5 10V6.5M12 20.5V15.5" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-				test
-			</button>
-			<div class="button button_icony button_icony-40" style="margin-top: 20px">
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.77778 10.7222V18.5C5.77778 19.6046 6.67321 20.5 7.77778 20.5H12M5.77778 10.7222L11.2929 5.20711C11.6834 4.81658 12.3166 4.81658 12.7071 5.20711L17.5 10M5.77778 10.7222L4 12.5M18.2222 10.7222V18.5C18.2222 19.6046 17.3268 20.5 16.2222 20.5H12M18.2222 10.7222L20 12.5M18.2222 10.7222L17.5 10M17.5 10V6.5M12 20.5V15.5" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</div>
-			<button disabled class="button button_icony button_icony-32" style="margin-top: 20px">
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.77778 10.7222V18.5C5.77778 19.6046 6.67321 20.5 7.77778 20.5H12M5.77778 10.7222L11.2929 5.20711C11.6834 4.81658 12.3166 4.81658 12.7071 5.20711L17.5 10M5.77778 10.7222L4 12.5M18.2222 10.7222V18.5C18.2222 19.6046 17.3268 20.5 16.2222 20.5H12M18.2222 10.7222L20 12.5M18.2222 10.7222L17.5 10M17.5 10V6.5M12 20.5V15.5" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</button>
-
-			<div class="button button_icony button_icony-24" style="margin-top: 20px">
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.77778 10.7222V18.5C5.77778 19.6046 6.67321 20.5 7.77778 20.5H12M5.77778 10.7222L11.2929 5.20711C11.6834 4.81658 12.3166 4.81658 12.7071 5.20711L17.5 10M5.77778 10.7222L4 12.5M18.2222 10.7222V18.5C18.2222 19.6046 17.3268 20.5 16.2222 20.5H12M18.2222 10.7222L20 12.5M18.2222 10.7222L17.5 10M17.5 10V6.5M12 20.5V15.5" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</div>
-
-			<button disabled class="button button_icony button_icony-16" style="margin-top: 20px">
-				<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M5.77778 10.7222V18.5C5.77778 19.6046 6.67321 20.5 7.77778 20.5H12M5.77778 10.7222L11.2929 5.20711C11.6834 4.81658 12.3166 4.81658 12.7071 5.20711L17.5 10M5.77778 10.7222L4 12.5M18.2222 10.7222V18.5C18.2222 19.6046 17.3268 20.5 16.2222 20.5H12M18.2222 10.7222L20 12.5M18.2222 10.7222L17.5 10M17.5 10V6.5M12 20.5V15.5" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</button>
-		</div> -->
 		<script src="assets/js/scripts.js"></script>
 	</body>
 </html>

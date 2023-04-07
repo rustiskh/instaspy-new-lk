@@ -24,6 +24,11 @@
 		color: color(black-16);
 	}
 
+	.form {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__error {
 		font-weight: 400;
 		font-size: 14px;

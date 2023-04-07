@@ -16,6 +16,10 @@
 
 	transition: all 0.2s ease;
 
+	@include laptop {
+		padding: 12px 24px 11px;
+	}
+
 	&:disabled {
 		background: color(gray-f5);
 		color: color(gray-c6);
