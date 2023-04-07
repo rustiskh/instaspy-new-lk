@@ -329,8 +329,8 @@
   background-image: url("../icons/loader_green.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-animation: rotation 2s ease infinite;
-          animation: rotation 2s ease infinite;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
 }
 @-webkit-keyframes rotation {
   to {
@@ -355,6 +355,7 @@
   overflow: hidden;
   max-height: 200px;
   overflow-y: auto;
+  z-index: 100;
   /* Скрытие стрелок */
   /* Скрытие подложки */
   /* Ширина и цвет ползунка в Firefox */

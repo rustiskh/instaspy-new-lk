@@ -103,7 +103,7 @@
 		background-image: url("../icons/loader_green.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
-		animation: rotation 2s ease infinite;
+		animation: rotation 1s linear infinite;
 		@keyframes rotation {
 			to {
 				transform: rotate(360deg);
@@ -123,6 +123,7 @@
 
 		max-height: 200px;
 		overflow-y: auto;
+		z-index: 100;
 
 		/* Скрытие стрелок */
 		&::-webkit-scrollbar-button {
