@@ -1,0 +1,15 @@
+.subscription-info-block {
+	&__text {
+		span {
+			font-weight: 700;
+		}
+
+		margin-bottom: 16px;
+	}
+
+	&__btn {
+		padding: 0;
+		text-align: left;
+		width: fit-content;
+	}
+}

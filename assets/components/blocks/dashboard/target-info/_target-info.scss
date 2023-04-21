@@ -1,0 +1,117 @@
+.target-info {
+	display: flex;
+
+	@include laptop {
+		flex-direction: column;
+	}
+
+	&__content-wrapper {
+		display: flex;
+	}
+
+	&__avatar {
+		width: 80px;
+		margin-right: 8px;
+	}
+
+	&__details-wrapper {
+	}
+
+	&__name-wrapper {
+		margin-bottom: 8px;
+
+		@include laptop {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__stats-wrapper {
+		display: flex;
+	}
+
+	&__stats-item {
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__label {
+		font-weight: 300;
+		font-size: 10px;
+		line-height: 12px;
+		color: color(black-16);
+
+		@include laptop {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+
+	&__login {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+		color: color(black-16);
+	}
+
+	&__number {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+	}
+
+	&__controls-wrapper {
+		margin-left: 10px;
+
+		@include laptop {
+			display: flex;
+			margin-top: 16px;
+		}
+	}
+
+	&__control-btn {
+		margin-bottom: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include laptop {
+			margin-bottom: 0;
+			margin-right: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&_arrows {
+		}
+
+		&_prev {
+		}
+
+		&_next {
+		}
+
+		&_add {
+			@include laptop {
+				width: auto;
+				padding-left: 6px;
+				padding-right: 6px;
+			}
+
+			span {
+				display: none;
+				margin-left: 4px;
+
+				@include laptop {
+					display: block;
+				}
+			}
+		}
+	}
+}

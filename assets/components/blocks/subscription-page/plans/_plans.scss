@@ -1,0 +1,86 @@
+.plans {
+	&__title {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: color(gray-59);
+	}
+
+	&__confirm {
+		margin-top: 28px;
+
+		@include laptop {
+			margin-top: 40px;
+		}
+
+		&-plan {
+			margin-bottom: 24px;
+
+			&-title {
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 31px;
+				color: color(black-16);
+				margin-bottom: 8px;
+			}
+
+			&-text {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 17px;
+				color: color(black-16);
+			}
+		}
+
+		&-agreement {
+			display: flex;
+			align-items: center;
+			margin-bottom: 16px;
+
+			&-checkbox {
+				margin-right: 8px;
+			}
+
+			&-text {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 17px;
+				color: color(black-16);
+			}
+
+			&-link {
+				color: color(green-deep);
+			}
+		}
+
+		&-controls {
+			display: flex;
+			align-items: start;
+			align-items: flex-start;
+
+			&-btn {
+				margin-right: 16px;
+				min-width: 150px;
+
+				@include laptop {
+					min-width: 170px;
+				}
+			}
+
+			&-help {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 17px;
+				color: color(black-16);
+			}
+
+			&-error {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 17px;
+				color: color(red-deepest);
+			}
+		}
+	}
+}

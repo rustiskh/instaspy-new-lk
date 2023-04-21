@@ -1,0 +1,61 @@
+<!-- Статусы контента в обертке новостей - можно определить по id -->
+
+<!-- Начальный статус - до запуска первого анализа (но после привязки - есть возможность запустить анализ) -->
+<section class="feed-status" id="status-start-analyze">
+	<p class="feed-status__text">Чтобы получить данные по активности вашей цели - нажмите на кнопку <span class="feed-status__text-span">Запустить анализ</span></p>
+</section>
+
+<!-- В процессе сбора - статус, когда категория загружается -->
+<section class="feed-status" id="status-analyzing">
+	<p class="feed-status__text">Данные по активности вашей цели в процессе анализа и появятся в ближайшее время!</p>
+
+	<div class="feed-status__notification system-info">
+		<div class="feed-status__notification-title-wrapper system-info__title-wrapper">
+			<div class="feed-status__notification-title-icon system-info__title-icon">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.1332 11.9067L15.8995 11.2642L15.1332 11.9067ZM4.86667 11.9067L4.10038 11.2642L4.86667 11.9067ZM6.83329 7.49967C6.83329 5.75077 8.25106 4.33301 9.99996 4.33301V2.33301C7.14649 2.33301 4.83329 4.6462 4.83329 7.49967H6.83329ZM6.83329 9.90541V7.49967H4.83329V9.90541H6.83329ZM5.16663 13.833C5.16663 13.3433 5.34135 12.897 5.63297 12.5492L4.10038 11.2642C3.5181 11.9587 3.16663 12.8561 3.16663 13.833H5.16663ZM5.83329 13.1663H4.49996V15.1663H5.83329V13.1663ZM14.1666 13.1663H5.83329V15.1663H14.1666V13.1663ZM15.5 13.1663H14.1666V15.1663H15.5V13.1663ZM14.3669 12.5492C14.6586 12.897 14.8333 13.3433 14.8333 13.833H16.8333C16.8333 12.8561 16.4818 11.9587 15.8995 11.2642L14.3669 12.5492ZM13.1666 7.49967V9.90541H15.1666V7.49967H13.1666ZM9.99996 4.33301C11.7489 4.33301 13.1666 5.75077 13.1666 7.49967H15.1666C15.1666 4.6462 12.8534 2.33301 9.99996 2.33301V4.33301ZM15.8995 11.2642C15.4 10.6684 15.1666 10.2626 15.1666 9.90541H13.1666C13.1666 11.0668 13.8908 11.9813 14.3669 12.5492L15.8995 11.2642ZM3.16663 13.833C3.16663 14.5694 3.76358 15.1663 4.49996 15.1663V13.1663C4.86815 13.1663 5.16663 13.4648 5.16663 13.833H3.16663ZM15.5 15.1663C16.2363 15.1663 16.8333 14.5694 16.8333 13.833H14.8333C14.8333 13.4648 15.1318 13.1663 15.5 13.1663V15.1663ZM4.83329 9.90541C4.83329 10.2626 4.5999 10.6684 4.10038 11.2642L5.63297 12.5492C6.10913 11.9813 6.83329 11.0668 6.83329 9.90541H4.83329Z" fill="#57A41B" />
+					<path d="M11.498 16.5643C11.3594 16.8485 11.1427 17.0875 10.8734 17.2532C10.604 17.4189 10.293 17.5046 9.97677 17.5002C9.66053 17.4957 9.35208 17.4014 9.08744 17.2283C8.82279 17.0551 8.61289 16.8102 8.48223 16.5222" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M10 2.5V3.33333" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h3 class="feed-status__notification-title-text system-info__title-text">Настройте уведомления</h3>
+		</div>
+		<p class="feed-status__notification-text system-info__text">Включите напоминание, чтобы мы сообщили вам на почту о завершении сбора данных по цели. Так вы увидите самую актуальную информацию и не забудете запустить новый сбор.</p>
+		<div class="feed-status__notification-controls-wrapper system-info__controls-wrapper">
+			<a href="/notifications.html" class="button button_ghost system-info__controls-btn system-info__controls-btn_main feed-status__notification-btn">настроить</a>
+			<div class="button button_textual system-info__controls-btn system-info__controls-btn_secondary feed-status__notification-btn">скрыть</div>
+		</div>
+	</div>
+</section>
+
+<!-- Пустая категория - не было данных в категории -->
+<section class="feed-status" id="status-empty">
+	<img src="assets/img/feed-status/sad-dog.svg" alt="К сожалению, пусто..." class="feed-status__img" />
+	<p class="feed-status__text">Нам нечего показать по этой категории, так как по ней не было изменений или данные остутствуют</p>
+</section>
+
+<!-- Условно пустая категория - для тех категорий, где данные могут появится только после второго анализа (подписки, подписчики и тд) -->
+<section class="feed-status" id="status-first-scan-empty">
+	<p class="feed-status__text">В этом разделе сейчас нет данных, т.к. они не могут быть собраны <span class="feed-status__text-span">во время первого анализа</span>. Данные в этом разделе и в некоторых других появятся <span class="feed-status__text-span">после второго анализа активности</span>.</p>
+</section>
+
+<!-- Заблокированная категория - категория закрыта, т.к. подписка отключена, оплаченный период завершен и т.д. -->
+<section class="feed-status" id="status-locked">
+	<div class="feed-status__lock system-info system-info_yellow">
+		<div class="feed-status__lock-title-wrapper system-info__title-wrapper">
+			<div class="feed-status__lock-title-icon system-info__title-icon">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13.3333 8.33333V5.83333C13.3333 3.99238 11.8409 2.5 10 2.5C8.15905 2.5 6.66667 3.99238 6.66667 5.83333V8.33333M10 11.6667V14.1667M15 12.5C15 15.2614 12.7614 17.5 10 17.5C7.23858 17.5 5 15.2614 5 12.5C5 9.73858 7.23858 7.5 10 7.5C12.7614 7.5 15 9.73858 15 12.5ZM10.8333 11.6667C10.8333 12.1269 10.4602 12.5 10 12.5C9.53976 12.5 9.16667 12.1269 9.16667 11.6667C9.16667 11.2064 9.53976 10.8333 10 10.8333C10.4602 10.8333 10.8333 11.2064 10.8333 11.6667Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h3 class="feed-status__lock-title-text system-info__title-text">
+				Раздел недоступен.<br />
+				Ошибка подписки
+			</h3>
+		</div>
+		<p class="feed-status__lock-text system-info__text">Часть функционала закрыта из-за неактивной подписки, пожалуйста, возобновите подписку или оплатите новый тариф</p>
+		<div class="feed-status__lock-controls-wrapper system-info__controls-wrapper">
+			<a href="/plans" class="button button_ghost system-info__controls-btn system-info__controls-btn_main feed-status__lock-btn">выбрать тариф</a>
+		</div>
+	</div>
+</section>

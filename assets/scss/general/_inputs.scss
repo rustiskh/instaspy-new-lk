@@ -189,3 +189,21 @@
 		cursor: pointer;
 	}
 }
+
+// Структура кастомного селекта
+// <div class="custom-select">
+// 			<div class="custom-select__field-wrapper">
+// 				<input type="text" class="general-input custom-select__input add-account-block__input" placeholder="@username или ссылка" />
+// 				<span class="custom-select__loader"></span>
+// 			</div>
+// 			<div class="custom-select__list-wrapper">
+// 				<ul class="custom-select__list custom-select__list_users">
+// 					<li class="custom-select__list-item">
+// 					</li>
+// 					<li class="custom-select__list-item">
+// 					</li>
+// 					<li class="custom-select__list-item">
+// 					</li>
+// 				</ul>
+// 			</div>
+// 		</div>

@@ -1,0 +1,42 @@
+<!-- Элементы категорий -->
+<!-- Стандартное состояние -  загрузка завершена (категория может быть с данными или пустая) -->
+<div class="topic-block__item">
+	<div class="topic-block__item-icon">
+		<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M3.68835 10.7595L10 17.0712L16.3116 10.7595C17.8961 9.17508 17.8961 6.60615 16.3116 5.02169C14.7272 3.43722 12.1583 3.43722 10.5738 5.02169L10 5.59547L9.42621 5.02169C7.84175 3.43722 5.27282 3.43722 3.68835 5.02169C2.10388 6.60615 2.10388 9.17508 3.68835 10.7595Z" stroke="#161516" stroke-width="1.5" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="topic-block__item-title">название</div>
+</div>
+
+<!-- Стандартное состояние -  загрузка завершена - категория выбрана (добавляется класс active - аналогично у загружаемой и заблокированной категорий) -->
+<div class="topic-block__item active">
+	<div class="topic-block__item-icon">
+		<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M3.68835 10.7595L10 17.0712L16.3116 10.7595C17.8961 9.17508 17.8961 6.60615 16.3116 5.02169C14.7272 3.43722 12.1583 3.43722 10.5738 5.02169L10 5.59547L9.42621 5.02169C7.84175 3.43722 5.27282 3.43722 3.68835 5.02169C2.10388 6.60615 2.10388 9.17508 3.68835 10.7595Z" stroke="#161516" stroke-width="1.5" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="topic-block__item-title">название</div>
+</div>
+
+<!-- Заблокированная категория -  загрузка завершена - категория заблокирована по тем или иным причинам - отмена подписки и т.д..
+Тем не менее в категорию можно перейти -->
+<div class="topic-block__item disabled">
+	<div class="topic-block__item-icon">
+		<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M3.68835 10.7595L10 17.0712L16.3116 10.7595C17.8961 9.17508 17.8961 6.60615 16.3116 5.02169C14.7272 3.43722 12.1583 3.43722 10.5738 5.02169L10 5.59547L9.42621 5.02169C7.84175 3.43722 5.27282 3.43722 3.68835 5.02169C2.10388 6.60615 2.10388 9.17508 3.68835 10.7595Z" stroke="#161516" stroke-width="1.5" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="topic-block__item-title">название</div>
+</div>
+
+<!-- Загружаемая категория -  загрузка в процессе 
+Тем не менее в категорию можно перейти -->
+<div class="topic-block__item disabled active loading">
+	<div class="topic-block__item-icon">
+		<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M2.6665 16.0001C2.6665 23.3641 8.63584 29.3334 15.9998 29.3334C23.3638 29.3334 29.3332 23.3641 29.3332 16.0001C29.3332 8.63608 23.3638 2.66675 15.9998 2.66675" stroke="#595866" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</div>
+	<div class="topic-block__item-title">название</div>
+</div>

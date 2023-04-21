@@ -1,0 +1,23 @@
+.subscription-managment {
+	&__text {
+		span {
+			font-weight: 700;
+		}
+
+		margin-bottom: 16px;
+	}
+
+	&__btn {
+		padding: 0;
+		text-align: left;
+		width: fit-content;
+
+		&-main {
+			margin-top: 8px;
+		}
+
+		&-secondary {
+			margin-top: 16px;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.feed-status {
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(gray-88);
+
+		&-span {
+			font-weight: 700;
+		}
+	}
+
+	&__img {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__notification {
+		margin-top: 24px;
+	}
+}

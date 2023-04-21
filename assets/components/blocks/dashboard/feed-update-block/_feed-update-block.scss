@@ -1,0 +1,53 @@
+.feed-update-block {
+	// @include laptop {
+	// 	max-width: 340px;
+	// }
+
+	&__text {
+		margin-bottom: 16px;
+	}
+
+	&__btn {
+		margin-bottom: 16px;
+
+		&:hover {
+			svg {
+				animation: turn 1s ease;
+
+				@keyframes turn {
+					to {
+						transform: rotate(-180deg);
+					}
+				}
+			}
+		}
+
+		&:disabled {
+			svg {
+				animation: none;
+			}
+
+			&.feed-update-block__btn_loading {
+				svg {
+					animation: rotation 2s ease infinite;
+					@keyframes rotation {
+						to {
+							transform: rotate(-360deg);
+						}
+					}
+				}
+			}
+		}
+
+		&_loading {
+			svg {
+				animation: rotation 2s ease infinite;
+				@keyframes rotation {
+					to {
+						transform: rotate(-360deg);
+					}
+				}
+			}
+		}
+	}
+}

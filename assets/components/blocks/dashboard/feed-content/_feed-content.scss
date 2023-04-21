@@ -1,0 +1,15 @@
+.feed-content {
+	border-top: 1px solid color(gray-e1);
+	padding-top: 12px;
+	min-height: 200px;
+
+	&__wrapper {
+	}
+
+	&__load-more-btn {
+		margin-top: 12px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
