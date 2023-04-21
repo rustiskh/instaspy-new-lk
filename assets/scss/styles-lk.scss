@@ -2,21 +2,73 @@
 @import "general/colors";
 @import "general/buttons";
 @import "general/inputs";
+@import "general/checkbox";
+// -- Стили плиток дашборда (блоки, имеющие серый фон)
 @import "general/tail";
+// -- Стили цветных системных оповещений
+@import "general/system-info";
 @import "../components/general/header/header";
+@import "../components/general/header/header-menu";
 @import "../components/general/footer/footer";
+@import "../components/general/modals/modals";
 
 // Страница авторизации
 @import "../components/blocks/auth-page/auth-block/auth-block";
 @import "../components/blocks/auth-page/auth-register-block/auth-register-block";
 
 // Страница восстановления пароля
-@import "../components/blocks/auth-recovery/password-recovery-block/password-recovery-block";
-@import "../components/blocks/auth-recovery/new-password-block/new-password-block";
+@import "../components/blocks/auth-page/auth-recovery/password-recovery-block/password-recovery-block";
+@import "../components/blocks/auth-page/auth-recovery/new-password-block/new-password-block";
 
 // Главная страница + стр. добавления аккаунта
-@import "../components/blocks/add-account/add-account-block/add-account-block";
+@import "../components/blocks/dashboard/add-account-block/add-account-block";
 @import "../components/blocks/promo/demo-banner/promo-demo-banner";
+
+// Главная страница
+// dashboard-start.html
+// --блок смены временного пароля
+@import "../components/blocks/dashboard/temp-password-block/temp-password-block";
+// --блок цели - логин, данные, переключатели
+@import "../components/blocks/dashboard/target-info/target-info";
+// --блок привязки карты
+@import "../components/blocks/dashboard/card-bind-block/card-bind-block";
+// --блок обновления данных
+@import "../components/blocks/dashboard/feed-update-block/feed-update-block";
+// --блок выбора катогории данных
+@import "../components/blocks/dashboard/topic-block/topic-block";
+// --блок чекпоинта временного аккаунта
+@import "../components/blocks/dashboard/private-acc-block/private-acc-block";
+// --обертка новостной ленты - оболочки для всех новостей и компонентов ленты
+@import "../components/blocks/dashboard/feed-content/feed-content";
+// --блок статуса раздела - сбор, в процессе, пусто - текстовая подсказка о том, почему нет данных
+@import "../components/blocks/dashboard/feed-content/feed-status";
+// --блок переключения между категориями в нижней части ленты новостей
+@import "../components/blocks/dashboard/feed-content/feed-footer";
+
+// dashboard-problem.html
+// --Блок возобновления подписки
+@import "../components/general/subscription-renewal/subscription-renewal-block";
+// --Блок ошибки из-за неудачной оплаты
+@import "../components/blocks/dashboard/payment-error-block/payment-error-block";
+// --Блок с опросом - он не относится к ошибкам, но просто представлен на этой странице
+@import "../components/blocks/promo/promo-survey/promo-survey";
+
+// dashboard-data-***.html
+// --Блок контента ленты
+@import "../components/blocks/dashboard/feed-content/feed-item";
+// -- блок контента раздела Лайки
+@import "../components/blocks/dashboard/feed-content/feed-item-content/feed-item-like-content";
+
+// Cтраница тарифов
+// subscription.html
+// --блок Отзывы
+@import "../components/blocks/subscription-page/reviews/reviews";
+// --блок Информации о подписке
+@import "../components/blocks/subscription-page/subscription-info-block/subscription-info-block";
+// --Блок управления подпиской (отмены)
+@import "../components/blocks/subscription-page/subscription-managment/subscription-managment";
+// --Блок Тарифов
+@import "../components/blocks/subscription-page/plans/plans";
 
 * {
 	margin: 0;
@@ -36,6 +88,95 @@ a {
 	margin: 0 auto;
 }
 
+.page-title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	color: color(black-16);
+}
+
 .canvas {
-	padding: 36px 10px 0px 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 36px;
+	min-height: 520px;
+	padding-bottom: 40px;
+
+	// padding: 36px 10px 0px 10px;
+
+	@include laptop {
+		padding: 36px 0px 0px 0px;
+		// display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: start;
+		padding-bottom: 80px;
+	}
+
+	&__col {
+		max-width: 456px;
+		width: 100%;
+
+		section {
+			// max-width: 456px;
+			// margin-right: 10px;
+			// margin-left: 10px;
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+
+			@include laptop {
+				margin-right: 0px;
+				margin-left: 0px;
+			}
+
+			// Убирает отсутпы у обертки слайдера, чтобы слайды выходили за границу экрана
+			@media screen and (max-width: 476px) {
+				margin-right: 10px;
+				margin-left: 10px;
+
+				&.topic-block {
+					margin-right: 0px;
+					margin-left: 0px;
+					margin-bottom: 0px;
+				}
+			}
+		}
+
+		&_left {
+			// max-width: 100%;
+			margin-bottom: 24px;
+
+			@include laptop {
+				max-width: 362px;
+				margin-right: 108px;
+				margin-bottom: 0px;
+			}
+
+			section {
+				@include laptop {
+					// max-width: 362px;
+					width: 100%;
+				}
+			}
+		}
+
+		&_right {
+			// max-width: 100%;
+
+			@include laptop {
+				max-width: 456px;
+			}
+
+			section {
+				@include laptop {
+					// max-width: 456px;
+					width: 100%;
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,214 @@
+<!-- Шаблон модального окна -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body <!-- modal-body_media modal-body_video modal-body_textual -->">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header">
+			<div class="modal-body__header-icon"></div>
+			<h4 class="modal-body__header-title"></h4>
+			<p class="modal-body__header-subtitle"></p>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<p class="modal-body__content-text"></p>
+			<div class="modal-body__content-item">
+				<img src="" alt="" class="modal-body__content-img" />
+				<video src="" controls playsinline class="modal-body__content-video"></video>
+			</div>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main"></button>
+			<button class="button button_textual modal-body__btn-secondary"></button>
+			<button class="button button_icon-text button_textual modal-body__btn-secondary"></button>
+		</div>
+	</div>
+</section>
+
+<!-- Пример модалки медиа. Фото -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_media modal-body_photo">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header">
+			<h4 class="modal-body__header-title">Опубликовано новое фото</h4>
+			<p class="modal-body__header-subtitle">Дата публикации: ${DD.MM.YY HH:MM}</p>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<div class="modal-body__content-item">
+				<img src="assets/img/modal-img-example.png" alt="" class="modal-body__content-img" />
+			</div>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">закрыть</button>
+			<a href="${instagram-link}" class="button button_icon-text button_textual modal-body__btn-secondary">
+				<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8.75 4.25H5.75C4.92157 4.25 4.25 4.92157 4.25 5.75V13.25C4.25 14.0784 4.92157 14.75 5.75 14.75H13.25C14.0784 14.75 14.75 14.0784 14.75 13.25V9.6875M14.75 4.25H11.75M14.75 4.25V7.25M14.75 4.25L7.25 11.75" stroke="#84B43C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				смотреть в инстаграм
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Пример модалки медиа. Видео -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_media modal-body_video">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header">
+			<h4 class="modal-body__header-title">Опубликовано новое видео</h4>
+			<p class="modal-body__header-subtitle">Дата публикации: ${DD.MM.YY HH:MM}</p>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<div class="modal-body__content-item">
+				<video src="https://instashpion.ru/video/c85cc8ec9b56f7734abc005d1cb68524.mp4" controls playsinline class="modal-body__content-video"></video>
+			</div>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">закрыть</button>
+			<a href="${instagram-link}" class="button button_icon-text button_textual modal-body__btn-secondary">
+				<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8.75 4.25H5.75C4.92157 4.25 4.25 4.92157 4.25 5.75V13.25C4.25 14.0784 4.92157 14.75 5.75 14.75H13.25C14.0784 14.75 14.75 14.0784 14.75 13.25V9.6875M14.75 4.25H11.75M14.75 4.25V7.25M14.75 4.25L7.25 11.75" stroke="#84B43C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+				смотреть в инстаграм
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Модалка отмены подписки. Шаг 1 -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_subscription-cancel">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header modal-body__header_кув">
+			<div class="modal-body__header-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<ellipse cx="12.0007" cy="16.6677" rx="0.933333" ry="0.933333" fill="#C93329" />
+					<path d="M12.001 10.1348L12.001 13.8681" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M4.1142 17.5066L10.2115 5.31208C10.9485 3.83799 13.0521 3.83798 13.7892 5.31208L19.8864 17.5066C20.5513 18.8364 19.5844 20.401 18.0976 20.401H5.90306C4.4163 20.401 3.4493 18.8364 4.1142 17.5066Z" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h4 class="modal-body__header-title">Внимание: отмена подписки</h4>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<p class="modal-body__content-text">Сейчас вы имеете полный доступ ко всему функционалу сервиса без каких-либо ограничений. Для получения актуальных данных не забывайте обновлять их каждый день вручную. Вы можете отменить подписку до ${DD.MM.YYYY HH:MM}.</p>
+			<p class="modal-body__content-text">Хотите продолжить мониторинг аккаунта?</p>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">да, продолжить</button>
+			<button class="button button_textual modal-body__btn-secondary">отменить подписку</button>
+		</div>
+	</div>
+</section>
+
+<!-- Модалка отмены подписки. Шаг 2. Предупреждение об ограничении функций -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_subscription-cancel">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header modal-body__header_green">
+			<div class="modal-body__header-icon modal-body__header-icon_red">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13.6952 6.11125L14.6213 5.73396C14.5147 5.47243 14.3026 5.26814 14.0372 5.17156L13.6952 6.11125ZM11.064 5.15359L11.4061 4.2139C11.1127 4.10713 10.7863 4.14348 10.5236 4.31219C10.261 4.48089 10.0921 4.76259 10.0672 5.07378L11.064 5.15359ZM15.2689 9.97412L14.3428 10.3514C14.4576 10.6331 14.6944 10.8473 14.9862 10.9333L15.2689 9.97412ZM16.3981 10.307L16.6808 9.34776L16.6808 9.34776L16.3981 10.307ZM5.75984 10.1757L4.76639 10.29C4.8097 10.6663 5.06189 10.9858 5.41782 11.1153L5.75984 10.1757ZM5.64054 9.13904L6.63398 9.0247C6.59067 8.64842 6.33849 8.32889 5.98256 8.19934L5.64054 9.13904ZM5.64052 9.13903L4.64708 9.25336C4.69038 9.62965 4.94257 9.94917 5.2985 10.0787L5.64052 9.13903ZM5.40192 7.06568L6.39537 6.95136L6.39537 6.95136L5.40192 7.06568ZM5.16332 4.99237L5.50534 4.05268C5.17966 3.93415 4.81583 3.99269 4.54378 4.20741C4.27173 4.42213 4.13025 4.7624 4.16988 5.1067L5.16332 4.99237ZM7.79446 5.95003L8.7879 5.8357C8.7446 5.45941 8.49241 5.13989 8.13648 5.01034L7.79446 5.95003ZM8.01137 7.83486L7.01792 7.94918C7.06381 8.34791 7.34365 8.68057 7.72863 8.79405L8.01137 7.83486ZM10.7839 8.6521L10.5012 9.6113C10.7901 9.69647 11.102 9.64685 11.3503 9.47624C11.5986 9.30562 11.7567 9.03219 11.7807 8.73192L10.7839 8.6521ZM14.0372 5.17156L11.4061 4.2139L10.722 6.09328L13.3531 7.05094L14.0372 5.17156ZM16.195 9.59683L14.6213 5.73396L12.7691 6.48854L14.3428 10.3514L16.195 9.59683ZM16.6808 9.34776L15.5516 9.01492L14.9862 10.9333L16.1153 11.2662L16.6808 9.34776ZM19.497 14.9257C20.3427 12.6022 19.0526 10.0469 16.6808 9.34776L16.1153 11.2662C17.3805 11.6391 18.0687 13.0022 17.6176 14.2417L19.497 14.9257ZM17.9144 15.6637C18.5552 15.897 19.2638 15.5666 19.497 14.9257L17.6176 14.2417C17.7622 13.8446 18.2013 13.6398 18.5984 13.7843L17.9144 15.6637ZM5.41782 11.1153L17.9144 15.6637L18.5984 13.7843L6.10186 9.23596L5.41782 11.1153ZM4.64709 9.25337L4.76639 10.29L6.75328 10.0613L6.63398 9.0247L4.64709 9.25337ZM5.98256 8.19934L5.98254 8.19934L5.2985 10.0787L5.29852 10.0787L5.98256 8.19934ZM6.63397 9.02471L6.39537 6.95136L4.40848 7.18001L4.64708 9.25336L6.63397 9.02471ZM6.39537 6.95136L6.15676 4.87805L4.16988 5.1067L4.40848 7.18001L6.39537 6.95136ZM4.8213 5.93207L7.45244 6.88972L8.13648 5.01034L5.50534 4.05268L4.8213 5.93207ZM6.80102 6.06436L7.01792 7.94918L9.00481 7.72053L8.7879 5.8357L6.80102 6.06436ZM11.0666 7.69291L8.29411 6.87566L7.72863 8.79405L10.5012 9.6113L11.0666 7.69291ZM10.0672 5.07378L9.7871 8.57229L11.7807 8.73192L12.0608 5.23341L10.0672 5.07378Z" fill="#57A41B" />
+					<path d="M4.53418 18.5332L19.4675 18.5332" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h4 class="modal-body__header-title">Внимание: ограничение части функционала</h4>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<p class="modal-body__content-text">Вынуждены предупредить, что отказ от подписки на сервис Инсташпион заблокирует для вас часть функций для отслеживания, такие как Истории, Подписки, Посты и Поклонники.</p>
+			<p class="modal-body__content-text">Вы действительно хотите отказаться от данного полезного функционала вместе с подпиской на сервис?</p>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">Нет, продолжить</button>
+			<button class="button button_textual modal-body__btn-secondary">отменить подписку</button>
+		</div>
+	</div>
+</section>
+
+<!-- Модалка отмены подписки. Шаг 3. Предложение скидки за сохранение -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_subscription-cancel">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header modal-body__header_green">
+			<div class="modal-body__header-icon modal-body__header-icon_red">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3.60059" y="6.40039" width="16.8" height="12.1333" rx="2" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M3.60059 10.1348H19.9339" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M7.33398 14.8008H9.20065" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h4 class="modal-body__header-title">Отмена подписки</h4>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<p class="modal-body__content-text">Кто знает, какие тайны вашей цели могут быть раскрыты на следующей неделе? Если вы остановите слежку сейчас - можете пропустить что-то важное. Предлагаем вам не бросать начатое дело и <span>дарим скидку ${discountValue}%</span> на следующее списание.</p>
+			<p class="modal-body__content-text">В итоге цена на следующую неделю для вас составит ${discountedPrice}₽.</p>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">Получить скидку ${discountValue}%</button>
+			<button class="button button_textual modal-body__btn-secondary">отменить подписку</button>
+		</div>
+	</div>
+</section>
+
+<!-- Модалка отмены подписки. Шаг 4. Предложение дней за сохранение -->
+<section class="modal">
+	<div class="modal__fade"></div>
+	<div class="modal-body modal-body_subscription-cancel">
+		<div data-modal-event="close" class="modal-body__close-icon">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.06665 7.4668L15.5333 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M15.5333 7.4668L8.06666 14.9335" stroke="#C6C5D2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="modal-body__header modal-body__header_green">
+			<div class="modal-body__header-icon modal-body__header-icon_red">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="3.60059" y="6.40039" width="16.8" height="12.1333" rx="2" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M3.60059 10.1348H19.9339" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					<path d="M7.33398 14.8008H9.20065" stroke="#57A41B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<h4 class="modal-body__header-title">Бесплатный доступ за активную подписку</h4>
+		</div>
+		<div class="modal-body__content-wrapper">
+			<p class="modal-body__content-text">Плюсом ко всем преимуществам, которые дает активная подписка, мы подарим вам <span>+${DD} дней доступа</span> к Инсташпиону совершенно бесплатно!</p>
+			<p class="modal-body__content-text">Надеемся, за это время вы оцените весь уникальный набор функций сервиса!</p>
+		</div>
+		<div class="modal-body__controls-wrapper">
+			<button data-modal-event="close" class="button button_shadow modal-body__btn-main">Получить +${DD} дней доступа</button>
+			<button class="button button_textual modal-body__btn-secondary">отменить подписку</button>
+		</div>
+	</div>
+</section>

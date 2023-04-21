@@ -1,0 +1,104 @@
+<!-- Блок системных уведомлений о проблемах с приватным аккаунтом -->
+
+<!-- Предложение доабвить подписанный на цель аккаунт -->
+<section class="private-acc-block system-info system-info_yellow" id="private-add-subscribed">
+	<div class="private-acc-block__title-wrapper system-info__title-wrapper">
+		<div class="private-acc-block__title-icon system-info__title-icon">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.33333 17.4999L5.98968 15.8258C3.79971 14.2616 2.5 11.736 2.5 9.04471L2.5 4.79511C2.5 4.42304 2.74665 4.09605 3.1044 3.99384L8.1044 2.56527C8.25403 2.52252 8.41264 2.52252 8.56227 2.56527L13.5623 3.99384C13.92 4.09605 14.1667 4.42304 14.1667 4.79511V6.24986M15.8333 12.4999V10.8332C15.8333 9.91272 15.0871 9.16652 14.1667 9.16652C13.2462 9.16652 12.5 9.91272 12.5 10.8332V12.4999M15.8333 12.4999H12.5M15.8333 12.4999C16.7538 12.4999 17.5 13.246 17.5 14.1665V15.8332C17.5 16.7537 16.7538 17.4999 15.8333 17.4999H12.5C11.5795 17.4999 10.8333 16.7537 10.8333 15.8332V14.1665C10.8333 13.246 11.5795 12.4999 12.5 12.4999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<h3 class="private-acc-block__title-text system-info__title-text">Приватный аккаунт</h3>
+	</div>
+	<p class="private-acc-block__text system-info__text">
+		Для того, чтобы следить за <span>${@my_target_acc}</span> нужно авторизоваться через любой аккаунт, подписанный на него. <br /><br />
+		Это нужно только для получение данных из Инстаграм, пользователь <span>никогда</span> не узнает, что вы шпионите за ним.
+	</p>
+	<div class="private-acc-block__form form">
+		<input type="text" class="private-acc-block__input general-input" placeholder="Логин аккаунта" />
+		<input type="text" class="private-acc-block__input general-input" placeholder="Пароль аккаунта" />
+		<button class="button button_ghost private-acc-block__form-btn">авторизоваться и следить</button>
+		<p class="system-info__error private-acc-block__error">Текст ошибки отображается здесь</p>
+	</div>
+	<p class="private-acc-block__text system-info__text">Важно: не забудьте отключить двухфакторную аутентификацию!</p>
+</section>
+
+<!-- Некорректные данные добавленного аккаунта -->
+<section class="private-acc-block system-info system-info_red" id="private-incorrect-data">
+	<div class="private-acc-block__title-wrapper system-info__title-wrapper">
+		<div class="private-acc-block__title-icon system-info__title-icon">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="6.25" cy="6.25" r="1" fill="#C93329" />
+				<circle cx="10" cy="6.25" r="1" fill="#C93329" />
+				<circle cx="13.75" cy="6.25" r="1" fill="#C93329" />
+				<path d="M7.49992 14.5833C7.49992 15.7339 6.56718 16.6667 5.41659 16.6667C4.26599 16.6667 3.33325 15.7339 3.33325 14.5833C3.33325 13.4327 4.26599 12.5 5.41659 12.5C6.56718 12.5 7.49992 13.4327 7.49992 14.5833ZM7.49992 14.5833H12.6041M15.8333 16.6667V14.7917C15.8333 14.6766 15.74 14.5833 15.6249 14.5833M12.6041 14.5833H15.6249M12.6041 14.5833V16.6667Mnan nanL15.6249 14.5833M15.6249 14.5833Lnan nan" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				<rect x="2.5" y="3.3335" width="15" height="5.83333" rx="2" stroke="#C93329" stroke-width="2" />
+			</svg>
+		</div>
+		<h3 class="private-acc-block__title-text system-info__title-text">Неверные данные</h3>
+	</div>
+	<p class="private-acc-block__text system-info__text">
+		Не удалось авторизоваться в аккаунт <span>${@login}</span> @login, добавленный для получения данных о <span>${@my_target_acc}</span>. <br /><br />
+		Попробуйте ещё раз
+	</p>
+
+	<div class="private-acc-block__form form">
+		<input type="text" class="private-acc-block__input general-input" placeholder="Логин аккаунта" />
+		<input type="text" class="private-acc-block__input general-input" placeholder="Пароль аккаунта" />
+		<button class="button button_ghost private-acc-block__form-btn">авторизоваться и следить</button>
+		<p class="system-info__error private-acc-block__error">Текст ошибки отображается здесь</p>
+	</div>
+	<p class="private-acc-block__text system-info__text">Важно: не забудьте отключить двухфакторную аутентификацию!</p>
+</section>
+
+<!-- Неизвестная ошибка - просьба перейти в Инсту -->
+<section class="private-acc-block system-info system-info_red" id="private-unknown">
+	<div class="private-acc-block__title-wrapper system-info__title-wrapper">
+		<div class="private-acc-block__title-icon system-info__title-icon">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<ellipse cx="10.0001" cy="14.1668" rx="0.833333" ry="0.833333" fill="#C93329" />
+				<path d="M10 8.3335L10 11.6668" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M3.11396 14.6057L8.21123 4.4112C8.94828 2.93711 11.0519 2.93711 11.7889 4.4112L16.8862 14.6057C17.5511 15.9355 16.5841 17.5002 15.0973 17.5002H4.90282C3.41605 17.5002 2.44906 15.9355 3.11396 14.6057Z" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<h3 class="private-acc-block__title-text system-info__title-text">Что-то пошло не так...</h3>
+	</div>
+	<p class="private-acc-block__text system-info__text">
+		По неизвестным причинам, что-то помешало запустить анализ с помощью вашего аккаунта. <br /><br />
+		Скорее всего проблема на стороне Инстаграма. <br /><br />
+		Перейдите в Инстаграм и следуйте их инструкциям или перезапустите анализ.
+	</p>
+
+	<div class="private-acc-block__controls-wrapper system-info__controls-wrapper">
+		<div class="button button_ghost system-info__controls-btn system-info__controls-btn_main private-acc-block__btn">Перейти в инстаграм</div>
+		<div class="button button_ghost system-info__controls-btn system-info__controls-btn_main private-acc-block__btn">запустить анализ</div>
+	</div>
+</section>
+
+<!-- Верефикация по телефону -->
+<section class="private-acc-block system-info system-info_red" id="private-phone-verify">
+	<div class="private-acc-block__title-wrapper system-info__title-wrapper">
+		<div class="private-acc-block__title-icon system-info__title-icon">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10.0001 9.16652V11.6665M9.77115 2.56527L4.77115 3.99384C4.4134 4.09605 4.16675 4.42304 4.16675 4.79511L4.16675 9.04471C4.16675 11.736 5.46646 14.2616 7.65643 15.8258L9.51572 17.1539C9.80546 17.3608 10.1947 17.3608 10.4844 17.1539L12.3437 15.8258C14.5337 14.2616 15.8334 11.736 15.8334 9.04471V4.79511C15.8334 4.42304 15.5868 4.09605 15.229 3.99384L10.229 2.56527C10.0794 2.52252 9.92078 2.52252 9.77115 2.56527Z" stroke="#C93329" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				<ellipse cx="10.0001" cy="6.66683" rx="0.833333" ry="0.833333" fill="#C93329" />
+			</svg>
+		</div>
+		<h3 class="private-acc-block__title-text system-info__title-text">Пройти верификацию</h3>
+	</div>
+	<p class="private-acc-block__text system-info__text">
+		Попытка авторизации была прервана Инстаграмом. <br /><br />
+		На номер телефона <span>${+7 900 000 ** **}</span> был отправлен код подтверждение - введите его в поле ниже и нажмите “Продолжить”
+	</p>
+
+	<div class="private-acc-block__form form">
+		<input type="text" class="private-acc-block__input general-input" placeholder="Введите код" />
+		<button class="button button_ghost form__btn form__btn_main private-acc-block__form-btn">продолжить</button>
+		<button class="button button_textual form__btn form__btn_secondary private-acc-block__form-btn">отправить код повторно</button>
+		<p class="system-info__error private-acc-block__error">Текст ошибки отображается здесь</p>
+	</div>
+	<p class="private-acc-block__text system-info__text">Важно: не забудьте отключить двухфакторную аутентификацию!</p>
+	<div class="private-acc-block__controls-wrapper system-info__controls-wrapper">
+		<div class="button button_textual system-info__controls-btn system-info__controls-btn_secondary private-acc-block__btn">отменить авторизацию</div>
+	</div>
+</section>

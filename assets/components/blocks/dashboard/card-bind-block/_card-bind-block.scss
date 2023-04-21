@@ -1,0 +1,70 @@
+.card-bind-block {
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		color: color(green-deepest);
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+	&__rating {
+		&-wrapper {
+			margin: 0 auto;
+			margin-bottom: 16px;
+		}
+
+		&-item {
+			color: #e7ad4b;
+			font-size: 28px;
+			line-height: 28px;
+
+			&:not(:last-child) {
+				margin-right: 4px;
+			}
+		}
+	}
+
+	&__form-wrapper {
+		margin-bottom: 32px;
+	}
+
+	&__agreement {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+
+		&-checkbox {
+			margin-right: 8px;
+		}
+
+		&-text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			color: color(black-16);
+		}
+
+		&-link {
+			color: color(green-deep);
+		}
+	}
+
+	&__input {
+		margin-bottom: 16px;
+	}
+
+	&__form-error {
+		margin-top: 8px;
+	}
+
+	&__disclaimer {
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 15px;
+		color: color(gray-88);
+	}
+}

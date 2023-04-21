@@ -28,6 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Меню
+    const menu = document.querySelector('.header-menu');
+    const burgerBtn = document.querySelector('.header__menu-btn');
+    const burgerBtnClose = document.querySelector('.header-menu__close-btn');
+    const menuItem = document.querySelectorAll('.header-menu__item');
+
+    burgerBtn.addEventListener('click', () => {
+        menu.classList.add('open');
+    });
+
+
+    burgerBtnClose.addEventListener('click', () => {
+        menu.classList.remove('open');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !burgerBtn.contains(e.target)) {
+            menu.classList.remove('open');
+        }
+    })
+
+    menuItem.forEach(element => {
+        element.addEventListener('click', () => {
+            menu.classList.remove('open');
+        });
+    });
+
     // Лоадер к форме добавления аккаунта
     const selects = document.querySelectorAll('.custom-select');
     selects.forEach(select => {
@@ -47,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Смена статусов в блоке Добавления аккаунта в кнопке Добавить аккаунт
-
     const statusBtn = document.querySelector('.add-account-block__btn_loading span');
 
     const statusList = [
@@ -60,8 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'подписки и подписчики'
     ]
 
-    console.log(statusBtn);
-
     let statusBtnTextIndex = 0; // начинаем с нулевого элемента массива
 
     setInterval(() => {
@@ -73,7 +97,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 
 
-    console.log(statusBtn.outerText);
-    console.log(statusList[1].toUpperCase());
 
+    const topicSlider = new Swiper('.topic-block__slider-wrapper', {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        // spaceBetween: 6,
+        slideActiveClass: 'active',
+        slideToClickedSlide: true,
+        loop: true,
+        // slidesOffsetBefore: 150,
+        // preventInteractionOnTransition: true,
+        // freeMode: {
+        //     enabled: true,
+        //     minimumVelocity: 0.7,
+        //     momentumRatio: 0.5,
+        //     sticky: true,
+        // },
+    });
+
+    const reviewsSlider = new Swiper('.reviews', {
+        // slidesPerView: 1,
+        // centeredSlides: true,
+        // spaceBetween: 6,
+        loop: true,
+        autoHeight: true,
+        bulletActiveClass: 'reviews-pagination_active',
+        bulletClass: 'reviews-pagination',
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        // slidesOffsetBefore: 150,
+        // preventInteractionOnTransition: true,
+        // freeMode: {
+        //     enabled: true,
+        //     minimumVelocity: 0.7,
+        //     momentumRatio: 0.5,
+        //     sticky: true,
+        // },
+    });
 });

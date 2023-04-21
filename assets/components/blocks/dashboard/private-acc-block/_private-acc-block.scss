@@ -1,0 +1,22 @@
+.private-acc-block {
+	&__form {
+		margin-bottom: 12px;
+	}
+
+	.system-info__controls {
+		&-wrapper {
+		}
+
+		&-btn {
+			&:not(:last-child) {
+				margin-right: 0px;
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		margin-right: 0px;
+	}
+}

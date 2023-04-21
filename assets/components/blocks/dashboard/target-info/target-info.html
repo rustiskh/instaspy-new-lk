@@ -1,0 +1,47 @@
+<!-- Блок управления целями - если целей >1, то появляются 
+	переключатели (лево-право). На пк версии переключатели 
+	перемещаются под блок и в кнопке добавления появляется 
+	span с текстом -->
+<section class="target-info">
+	<div class="target-info__content-wrapper">
+		<img src="assets/icons/avatar-empty.svg" alt="" class="target-info__avatar" />
+		<div class="target-info__details-wrapper">
+			<div class="target-info__name-wrapper">
+				<p class="target-info__label">цель:</p>
+				<h1 class="target-info__login">@${target-name}</h1>
+			</div>
+			<div class="target-info__stats-wrapper">
+				<div class="target-info__stats-item">
+					<p class="target-info__label">Подписчиков</p>
+					<h3 class="target-info__number">25k</h3>
+				</div>
+				<div class="target-info__stats-item">
+					<p class="target-info__label">Подписок</p>
+					<h3 class="target-info__number">1235</h3>
+				</div>
+				<div class="target-info__stats-item">
+					<p class="target-info__label">Публикаций</p>
+					<h3 class="target-info__number">65</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="target-info__controls-wrapper">
+		<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_prev">
+			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M11.625 14.25L7.08211 9.70711C6.69158 9.31658 6.69158 8.68342 7.08211 8.29289L11.625 3.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<button class="button button_icony button_icony-24 button_ghost target-info__control-btn target-info__control-btn_add">
+			<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M4 20.5V19.5C4 16.7386 6.23858 14.5 9 14.5H12.75M17.5355 14.4645V18M17.5355 18V21.5355M17.5355 18H21.0711M17.5355 18H14M15 7.5C15 9.70914 13.2091 11.5 11 11.5C8.79086 11.5 7 9.70914 7 7.5C7 5.29086 8.79086 3.5 11 3.5C13.2091 3.5 15 5.29086 15 7.5Z" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span>Добавить цель</span>
+		</button>
+		<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_next">
+			<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M7.125 3.75L11.6679 8.29289C12.0584 8.68342 12.0584 9.31658 11.6679 9.70711L7.125 14.25" stroke="#161516" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</div>
+</section>
