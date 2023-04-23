@@ -1,0 +1,32 @@
+.special-offer {
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+		margin-bottom: 12px;
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 18px;
+		color: color(black-16);
+		margin-bottom: 24px;
+	}
+
+	&__wrapper {
+		margin-bottom: 24px;
+	}
+
+	&__disclaimer {
+		font-weight: 300;
+		font-size: 13px;
+		line-height: 18px;
+		color: color(black-16);
+	}
+
+	&__link {
+		color: color(green-deep);
+	}
+}

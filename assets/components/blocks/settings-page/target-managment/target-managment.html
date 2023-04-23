@@ -1,0 +1,69 @@
+<!-- Блок управления целями -->
+<section class="target-managment">
+	<h4 class="target-managment__title">Управление целями</h4>
+	<p class="target-managment__text">Возможность удалить цель появляется через 31 день после первого анализа этой цели.</p>
+
+	<!-- Карточка цели, НЕдоступной для удаления -->
+	<div class="target-item">
+		<div class="target-item__header">
+			<div class="target-item__header-wrapper">
+				<img src="assets/icons/avatar-empty.svg" alt="" class="target-item__avatar" />
+				<div class="target-item__info">
+					<p class="target-item__label">цель:</p>
+					<div class="target-item__name">@${target-login}</div>
+				</div>
+			</div>
+
+			<button disabled class="button button_textual target-item__btn">удалить</button>
+		</div>
+		<p class="target-item__disclaimer">Удаление <span>@${target-login}</span> будет доступно через: ${DD} дней ${HH} ч: ${MM} мин</p>
+	</div>
+
+	<!-- Карточка цели, доступной для удаления -->
+	<div class="target-item">
+		<div class="target-item__header">
+			<div class="target-item__header-wrapper">
+				<img src="assets/icons/avatar-empty.svg" alt="" class="target-item__avatar" />
+				<div class="target-item__info">
+					<p class="target-item__label">цель:</p>
+					<div class="target-item__name">@${target-login}</div>
+				</div>
+			</div>
+
+			<button class="button button_textual target-item__btn">удалить</button>
+		</div>
+	</div>
+
+	<!-- Карточка цели выбранной для удаления -->
+	<div class="target-item">
+		<div class="target-item__header">
+			<div class="target-item__header-wrapper">
+				<img src="assets/icons/avatar-empty.svg" alt="" class="target-item__avatar" />
+				<div class="target-item__info">
+					<p class="target-item__label">цель:</p>
+					<div class="target-item__name">@${target-login}</div>
+				</div>
+			</div>
+
+			<button class="button button_textual target-item__btn">удалить</button>
+		</div>
+
+		<div class="target-item__delete system-info system-info_red">
+			<div class="target-item__delete-title-wrapper system-info__title-wrapper">
+				<div class="target-item__delete-title-icon system-info__title-icon">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<ellipse cx="9.99935" cy="14.1667" rx="0.833333" ry="0.833333" fill="#161516" />
+						<path d="M10 8.33334L10 11.6667" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M3.11323 14.6056L8.21049 4.41105C8.94754 2.93695 11.0512 2.93695 11.7882 4.41105L16.8855 14.6056C17.5504 15.9354 16.5834 17.5 15.0966 17.5H4.90208C3.41532 17.5 2.44833 15.9354 3.11323 14.6056Z" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+				<h3 class="target-item__delete-title-text system-info__title-text">Удаление цели @${target-login}</h3>
+			</div>
+			<p class="target-item__delete-text system-info__text">Вы уверены, что хотите удалить цель <span>@${target-login}</span> и перестать получать информацию об активности?</p>
+			<div class="target-item__delete-controls-wrapper system-info__controls-wrapper">
+				<div class="button button_ghost system-info__controls-btn system-info__controls-btn_main target-item__delete-btn target-item__delete-btn_main">Не удалять</div>
+				<div class="button button_textual system-info__controls-btn system-info__controls-btn_secondary target-item__delete-btn target-item__delete-btn_secondary">да, удалить</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,79 @@
+.account-settings {
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		color: color(black-16);
+		margin-bottom: 12px;
+
+		@include laptop {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		&-label {
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+			margin-bottom: 12px;
+		}
+
+		&-email-input {
+			margin-bottom: 24px;
+		}
+
+		&-password {
+			position: relative;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			&-input {
+				width: 100%;
+			}
+
+			&-icon {
+				width: 40px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 50%;
+				right: 0px;
+				transform: translateY(-50%);
+				cursor: pointer;
+
+				&.visible {
+					display: none;
+				}
+			}
+		}
+
+		&-temp-text {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+		}
+
+		&-btn {
+			margin-top: 24px;
+		}
+
+		&-error {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			color: color(red-deepest);
+			margin-top: 16px;
+		}
+	}
+}

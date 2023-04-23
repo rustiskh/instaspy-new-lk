@@ -5,6 +5,15 @@
 		line-height: 17px;
 		text-align: center;
 		color: color(gray-59);
+		margin-bottom: 36px;
+	}
+
+	&__cards-wrapper {
+		.plan-card {
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
 	}
 
 	&__confirm {
@@ -13,7 +22,6 @@
 		@include laptop {
 			margin-top: 40px;
 		}
-
 		&-plan {
 			margin-bottom: 24px;
 

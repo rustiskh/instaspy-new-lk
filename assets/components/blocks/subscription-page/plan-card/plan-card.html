@@ -1,0 +1,96 @@
+<!-- Шаблон карточки тарифа -->
+<div class="plan-card">
+	<div class="plan-card__flags">
+		<div class="plan-card__flags-item plan-card__flags-item_red">Flag</div>
+		<div class="plan-card__flags-item plan-card__flags-item_green">Flag</div>
+		<div class="plan-card__flags-item plan-card__flags-item_blue">Flag</div>
+	</div>
+	<div class="plan-card__body">
+		<h4 class="plan-card__title">${Название тарифа}</h4>
+		<p class="plan-card__text">Text text Text text Text text Text text Text text Text text Text text Text text Text text Text text</p>
+		<a href="#" class="plan-card__link">Link link link</a>
+		<div class="plan-card__controls-wrapper">
+			<div class="plan-card__price">
+				<p class="plan-card__price-current">${XXX}₽</p>
+				<p class="plan-card__price-old">${XXX}₽</p>
+			</div>
+			<!-- Когда карточка выбрана - карточке доавляется класс select -->
+			<button class="button button_ghost plan-card__btn">выбрать</button>
+		</div>
+	</div>
+</div>
+
+<!-- 7 дней. Пример активной карточки -->
+<div class="plan-card">
+	<div class="plan-card__flags">
+		<div class="plan-card__flags-item plan-card__flags-item_green">Действует</div>
+	</div>
+	<div class="plan-card__body">
+		<h4 class="plan-card__title">7 дней</h4>
+		<div class="plan-card__controls-wrapper">
+			<div class="plan-card__price">
+				<p class="plan-card__price-current">1190₽</p>
+				<p class="plan-card__price-old">1490₽</p>
+			</div>
+			<!-- Когда карточка выбрана - карточке доавляется класс select -->
+			<button disabled class="button button_ghost plan-card__btn">Активен</button>
+		</div>
+	</div>
+</div>
+
+<!-- 1 месяц -->
+<div class="plan-card">
+	<div class="plan-card__body">
+		<h4 class="plan-card__title">1 месяц</h4>
+		<div class="plan-card__controls-wrapper">
+			<div class="plan-card__price">
+				<p class="plan-card__price-current">1590₽</p>
+			</div>
+			<!-- Когда карточка выбрана - карточке доавляется класс select -->
+			<button class="button button_ghost plan-card__btn">выбрать</button>
+		</div>
+	</div>
+</div>
+
+<!-- 6 месяцев. Пример выбранной карточки -->
+<div class="plan-card select">
+	<div class="plan-card__flags">
+		<div class="plan-card__flags-item plan-card__flags-item_red">-25%</div>
+	</div>
+	<div class="plan-card__body">
+		<h4 class="plan-card__title">6 месяцев</h4>
+		<div class="plan-card__controls-wrapper">
+			<div class="plan-card__price">
+				<p class="plan-card__price-current">4455₽</p>
+				<p class="plan-card__price-old">5940₽</p>
+			</div>
+			<!-- Когда карточка выбрана - карточке доавляется класс select -->
+			<button class="button button_ghost plan-card__btn">Выбран</button>
+		</div>
+	</div>
+</div>
+
+<!-- Премиум -->
+<div class="plan-card">
+	<div class="plan-card__flags">
+		<div class="plan-card__flags-item plan-card__flags-item_blue">рекомендуем</div>
+	</div>
+	<div class="plan-card__body">
+		<h4 class="plan-card__title">PREMIUM</h4>
+		<p class="plan-card__text">
+			Расширенные возможности:<br />
+			- Неограниченное количество целей<br />
+			- Персональный менеджер<br />
+			- Улучшенные алгоритмы отслеживания активности<br />
+			- Телеграм-уведомления
+		</p>
+		<a href="/premium-info" class="plan-card__link">Подробнее о тарифе</a>
+		<div class="plan-card__controls-wrapper">
+			<div class="plan-card__price">
+				<p class="plan-card__price-current">2999₽/мес</p>
+			</div>
+			<!-- Когда карточка выбрана - карточке доавляется класс select -->
+			<button class="button button_ghost plan-card__btn">выбрать</button>
+		</div>
+	</div>
+</div>

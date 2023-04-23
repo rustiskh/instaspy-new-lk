@@ -1,8 +1,15 @@
-.general-input {
+.general-input,
+select.general-input {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
 	padding: 12px 0px 11px 24px;
+	padding-top: 12px;
 	border-radius: 12px;
 	border: 1px solid color(gray-88);
 
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
 	font-weight: 500;
 	font-size: 13px;
 	line-height: 17px;
@@ -54,6 +61,18 @@
 		border-color: color(green-deep);
 		color: color(green-deep);
 	}
+}
+
+select.general-input {
+	padding-right: 24px;
+	position: relative;
+	background-color: color(white);
+	cursor: pointer;
+
+	background-image: url("../icons/Chevron-Down.svg");
+	background-repeat: no-repeat;
+	background-position: calc(100% - 12px) center;
+	background-size: 12px;
 }
 
 .input-with-loader {
