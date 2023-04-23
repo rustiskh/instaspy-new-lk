@@ -17,7 +17,7 @@
 	transition: all 0.2s ease;
 
 	@include laptop {
-		padding: 14px 24px 15px;
+		padding: 14px 24px 13px;
 	}
 
 	&:disabled {
@@ -45,6 +45,10 @@
 				fill: color(gray-c6);
 			}
 		}
+	}
+
+	&_gradient {
+		background: color(green-gradient);
 	}
 
 	&_shadow {

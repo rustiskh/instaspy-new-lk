@@ -1,0 +1,72 @@
+.notification-data {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 18px;
+		color: color(black-16);
+
+		@include laptop {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 18px;
+		color: color(black-16);
+
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__controls {
+		margin-top: 12px;
+
+		&-item {
+			display: flex;
+			align-items: center;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		&-toggle {
+			margin-right: 12px;
+		}
+
+		&-title {
+			font-weight: 600;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+		}
+	}
+
+	&__period {
+		margin-top: 24px;
+
+		&-title {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+			margin-bottom: 12px;
+		}
+
+		&-select {
+			.general-input {
+				min-width: 170px;
+			}
+		}
+	}
+}

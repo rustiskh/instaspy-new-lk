@@ -1,16 +1,10 @@
 .system-info {
 	// блок имеет несколько цветовых форм - стили всех из них - ниже
 	padding: 12px 16px;
-
-	// background: color(gray-f5);
 	border: 1px solid color(green-deep);
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
-
-	// @include laptop {
-	// 	max-width: 456px;
-	// }
 
 	&__title {
 		&-wrapper {
@@ -101,10 +95,6 @@
 			}
 
 			&_secondary {
-				// 	padding-left: 0;
-				// 	padding-right: 0;
-				// 	color: color(black-16);
-
 				&:hover {
 					text-decoration: underline;
 				}

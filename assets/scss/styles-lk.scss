@@ -3,6 +3,7 @@
 @import "general/buttons";
 @import "general/inputs";
 @import "general/checkbox";
+@import "general/toggle";
 // -- Стили плиток дашборда (блоки, имеющие серый фон)
 @import "general/tail";
 // -- Стили цветных системных оповещений
@@ -13,14 +14,17 @@
 @import "../components/general/modals/modals";
 
 // Страница авторизации
+// auth-page.html
 @import "../components/blocks/auth-page/auth-block/auth-block";
 @import "../components/blocks/auth-page/auth-register-block/auth-register-block";
 
 // Страница восстановления пароля
+// auth-recovery-page.html
 @import "../components/blocks/auth-page/auth-recovery/password-recovery-block/password-recovery-block";
 @import "../components/blocks/auth-page/auth-recovery/new-password-block/new-password-block";
 
 // Главная страница + стр. добавления аккаунта
+// index.html
 @import "../components/blocks/dashboard/add-account-block/add-account-block";
 @import "../components/blocks/promo/demo-banner/promo-demo-banner";
 
@@ -69,6 +73,35 @@
 @import "../components/blocks/subscription-page/subscription-managment/subscription-managment";
 // --Блок Тарифов
 @import "../components/blocks/subscription-page/plans/plans";
+// --Блок Карточка тарифа
+@import "../components/blocks/subscription-page/plan-card/plan-card";
+
+// Cтраница тарифов
+// payment.html
+// --блок обертка для виджета
+@import "../components/blocks/payment-page/payment-widget-block";
+// --блок Успешной оплаты
+@import "../components/blocks/payment-page/payment-success-block";
+// --блок Горящие предложения
+@import "../components/blocks/payment-page/special-offer";
+// --блок Премиум баннер в блоке Горящие предложения
+@import "../components/blocks/promo/special-premium/special-premium-banner";
+
+// Cтраница Уведомления
+// notifications.html
+// --блок Уведомлений Готовность данных и Отчет о событиях
+@import "../components/blocks/notifications-page/notification-data/notification-data";
+// --блок с описанием подклчения телеграм-бота
+@import "../components/blocks/notifications-page/notification-telegram/notification-telegram";
+
+// Cтраница Настройки
+// settings.html
+// --блок Настроек учетной записи
+@import "../components/blocks/settings-page/account-settings/account-settings";
+// --блок Управления целями
+@import "../components/blocks/settings-page/target-managment/target-managment";
+// --блок Ввода промокода
+@import "../components/blocks/settings-page/promocode-block/promocode-block";
 
 * {
 	margin: 0;

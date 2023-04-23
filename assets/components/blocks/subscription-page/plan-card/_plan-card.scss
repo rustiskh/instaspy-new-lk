@@ -1,0 +1,105 @@
+.plan-card {
+	position: relative;
+
+	&__flags {
+		position: absolute;
+		top: -12px;
+		right: 16px;
+
+		&-item {
+			display: inline-block;
+			padding: 4px 10px;
+			background-color: color(gray-59);
+			border-radius: 6px;
+
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			text-align: center;
+			text-transform: uppercase;
+			color: color(white);
+
+			&_red {
+				background-color: color(red-deepest);
+			}
+
+			&_green {
+				background-color: color(green-deepest);
+			}
+
+			&_blue {
+				background-color: color(blue-deepest);
+			}
+		}
+	}
+
+	&__body {
+		padding: 12px 16px;
+		background: color(white);
+		box-shadow: 0px 30px 35px rgba(198, 197, 210, 0.15), 0px 15px 20px rgba(198, 197, 210, 0.2), 0px 4px 10px rgba(198, 197, 210, 0.35);
+		border-radius: 14px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 41px;
+		color: color(black-16);
+		// text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: color(black-16);
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: color(green-deep);
+		margin-top: 6px;
+	}
+
+	&__controls-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: start;
+		align-items: flex-start;
+		margin-top: 16px;
+	}
+
+	&__price {
+		display: flex;
+
+		&-current {
+			font-weight: 300;
+			font-size: 32px;
+			line-height: 41px;
+			color: color(black-16);
+		}
+
+		&-old {
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 32px;
+			text-decoration-line: line-through;
+			color: color(gray-88);
+			margin-left: 2px;
+		}
+	}
+
+	&__btn {
+	}
+
+	&.select {
+		.plan-card__btn {
+			background-color: color(green-deepest);
+			color: color(white);
+		}
+	}
+}
