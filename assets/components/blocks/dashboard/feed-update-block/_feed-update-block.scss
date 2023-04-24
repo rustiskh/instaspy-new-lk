@@ -52,11 +52,12 @@
 	}
 }
 
+// Стили для варианта со слайдером дат
 .test-feed-update-block {
 	// @include laptop {
 	// 	max-width: 340px;
 	// }
-	> .feed-update-block {
+	.feed-update-block {
 		&__text {
 			margin-bottom: 0px;
 		}
@@ -105,8 +106,54 @@
 			}
 		}
 
-		&__slider-wrapper {
+		// Сам слайдер дат
+		&__slider {
+			position: relative;
 			margin-top: 16px;
+			margin-left: 0;
+			margin-right: 0;
+
+			&-wrapper {
+				margin-top: 8px;
+			}
+
+			&-item {
+				width: auto;
+				margin-left: 6px;
+				margin-right: 6px;
+				margin-bottom: 2px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 20px;
+				color: color(gray-c6);
+				cursor: pointer;
+
+				&.active {
+					color: color(black-16);
+				}
+			}
+
+			&-btn {
+				position: absolute;
+				bottom: 0;
+				z-index: 100;
+
+				&_prev {
+					left: 0;
+				}
+
+				&_next {
+					right: 0;
+				}
+
+				button {
+					background: color(gray-f5);
+
+					&:hover {
+						background: color(green-deepest);
+					}
+				}
+			}
 		}
 	}
 }
