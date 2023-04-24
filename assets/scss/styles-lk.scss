@@ -60,8 +60,6 @@
 // dashboard-data-***.html
 // --Блок контента ленты
 @import "../components/blocks/dashboard/feed-content/feed-item";
-// -- блок контента раздела Лайки
-@import "../components/blocks/dashboard/feed-content/feed-item-content/feed-item-like-content";
 
 // Cтраница тарифов
 // subscription.html
@@ -102,6 +100,11 @@
 @import "../components/blocks/settings-page/target-managment/target-managment";
 // --блок Ввода промокода
 @import "../components/blocks/settings-page/promocode-block/promocode-block";
+
+// Cтраница Инструкция
+// tutorial.html
+// --блок ИНструкции
+@import "../components/blocks/tutorial-page/tutorial";
 
 * {
 	margin: 0;
@@ -179,8 +182,17 @@ a {
 			}
 		}
 
+		// Используется, когда одна колонка и должна быть на всю ширину (инструкция)
+		&_full-width {
+			max-width: 926px;
+
+			section {
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+		}
+
 		&_left {
-			// max-width: 100%;
 			margin-bottom: 24px;
 
 			@include laptop {
@@ -191,22 +203,18 @@ a {
 
 			section {
 				@include laptop {
-					// max-width: 362px;
 					width: 100%;
 				}
 			}
 		}
 
 		&_right {
-			// max-width: 100%;
-
 			@include laptop {
 				max-width: 456px;
 			}
 
 			section {
 				@include laptop {
-					// max-width: 456px;
 					width: 100%;
 				}
 			}

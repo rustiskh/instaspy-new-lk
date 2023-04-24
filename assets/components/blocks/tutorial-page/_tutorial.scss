@@ -1,0 +1,195 @@
+.tutorial {
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 32px;
+		color: color(black-16);
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 18px;
+		color: color(black-16);
+		margin-bottom: 32px;
+
+		@include laptop {
+			margin-bottom: 48px;
+		}
+
+		@include laptop {
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+
+	&__wrapper {
+	}
+
+	&-section {
+		margin-bottom: 32px;
+
+		&.open {
+			.tutorial-section__more-btn {
+				background-color: color(green-softest);
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+
+			.tutorial-section__body {
+				display: block;
+			}
+		}
+
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+
+			position: relative;
+
+			&:hover {
+				.tutorial-section__more-btn {
+					background-color: color(green-deep);
+					svg {
+						path {
+							stroke: color(white);
+						}
+					}
+				}
+			}
+		}
+
+		&__body {
+			display: none;
+		}
+
+		&__title {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 32px;
+			color: color(black-16);
+		}
+
+		&__more-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 24px;
+			height: 24px;
+			border: 1px solid color(green-deep);
+			border-radius: 4px;
+		}
+
+		&__text {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+			margin-top: 12px;
+
+			@include laptop {
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			a {
+				color: color(black-16);
+				text-decoration: underline;
+			}
+		}
+
+		&__img-wrapper {
+			width: fit-content;
+			margin: 0 auto;
+			margin-top: 12px;
+		}
+	}
+
+	&-subsection {
+		margin-top: 16px;
+
+		&.open {
+			.tutorial-subsection__more-btn {
+				background-color: color(green-softest);
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+			.tutorial-subsection__body {
+				display: block;
+			}
+		}
+
+		&__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+
+			position: relative;
+
+			&:hover {
+				.tutorial-subsection__more-btn {
+					background-color: color(green-deep);
+					svg {
+						path {
+							stroke: color(white);
+						}
+					}
+				}
+			}
+		}
+
+		&__body {
+			display: none;
+		}
+
+		&__title {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			color: color(black-16);
+		}
+
+		&__more-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 24px;
+			height: 24px;
+			border: 1px solid color(green-deep);
+			border-radius: 4px;
+		}
+
+		&__text {
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 18px;
+			color: color(black-16);
+			margin-top: 12px;
+
+			@include laptop {
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 18px;
+			}
+
+			a {
+				color: color(black-16);
+				text-decoration: underline;
+			}
+		}
+
+		&__img-wrapper {
+			width: fit-content;
+			margin: 0 auto;
+			margin-top: 12px;
+		}
+	}
+}
