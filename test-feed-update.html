@@ -1,4 +1,4 @@
-<!-- Первичное состояние дашборда сразу после регистрации пользователя -->
+<!-- На странице представлен тестовый блок обновления ленты с накоплением дат получения данных -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +11,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="assets/css/styles-lk.min.css" />
 	</head>
 	<body>
@@ -78,6 +79,7 @@
 						</svg>
 					</div>
 				</div>
+
 				<div class="header-menu">
 					<div class="header-menu__header">
 						<p class="header-menu__title">Меню</p>
@@ -199,111 +201,152 @@
 		</header>
 
 		<section class="canvas">
-			<div class="canvas__col">
-				<!-- Начальное состояние блока Добавление аккаунта + состояние загрузки, при вводе логина -->
-				<section class="add-account-block tail">
-					<h2 class="add-account-block__title tail__title">Анализ активности</h2>
-					<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
-					<div class="add-account-block__form-wrapper form" id="add-account-form">
-						<div class="custom-select add-account-block__select">
-							<div class="custom-select__field-wrapper">
-								<input type="text" class="general-input custom-select__input add-account-block__input" placeholder="@username или ссылка" />
-								<span class="custom-select__loader"></span>
-							</div>
-							<div class="custom-select__list-wrapper">
-								<ul class="custom-select__list custom-select__list_users">
-									<li class="custom-select__list-item">
-										<div class="custom-select__list-item-img-wrapper">
-											<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
-										</div>
-										<p class="custom-select__list-item-name">${login}</p>
-									</li>
-									<li class="custom-select__list-item">
-										<div class="custom-select__list-item-img-wrapper">
-											<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
-										</div>
-										<p class="custom-select__list-item-name">${login}</p>
-									</li>
-									<li class="custom-select__list-item">
-										<div class="custom-select__list-item-img-wrapper">
-											<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
-										</div>
-										<p class="custom-select__list-item-name">${login}</p>
-									</li>
-									<li class="custom-select__list-item">
-										<div class="custom-select__list-item-img-wrapper">
-											<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
-										</div>
-										<p class="custom-select__list-item-name">${login}</p>
-									</li>
-									<li class="custom-select__list-item">
-										<div class="custom-select__list-item-img-wrapper">
-											<img src="assets/icons/avatar-empty.svg" alt="" class="custom-select__list-item-img" />
-										</div>
-										<p class="custom-select__list-item-name">${login}</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<button class="button button_icon-text button_shadow add-account-block__btn">
-							<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 20.5V19.5C4 16.7386 6.23858 14.5 9 14.5H12.75M17.5355 14.4645V18M17.5355 18V21.5355M17.5355 18H21.0711M17.5355 18H14M15 7.5C15 9.70914 13.2091 11.5 11 11.5C8.79086 11.5 7 9.70914 7 7.5C7 5.29086 8.79086 3.5 11 3.5C13.2091 3.5 15 5.29086 15 7.5Z" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-							Добавить аккаунт
-						</button>
-					</div>
+			<div class="canvas__col canvas__col_left"></div>
+			<div class="canvas__col canvas__col_right">
+				<p style="margin-bottom: 30px; color: red">Варианты по умолчанию - стандартные</p>
+				<section class="feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<p class="feed-update-block__text tail__text">Запустите первый сбор данных прямо сейчас!</p>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Запустить анализ</span>
+					</button>
 				</section>
 
-				<section class="demo-banner-block">
-					<a href="/demo-cabinet.html" class="demo-banner">
-						<p class="demo-banner__title"><b>Интересно</b> какой <br />будет <b>результат?</b></p>
-						<p class="demo-banner__text">Посмотрите пример <br />демо-кабинета!</p>
-						<div class="button button_gradient button_shadow demo-banner__btn">открыть демо</div>
-						<img src="assets/img/promo-demo-banner/promo-demo-img.png" alt="Демо-версия" class="demo-banner__img" />
-					</a>
+				<!-- Первичное состояние - перед первым запуском -->
+				<section class="feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<p class="feed-update-block__text tail__text">Запустите первый сбор данных прямо сейчас!</p>
+					<button class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Запустить анализ</span>
+					</button>
+				</section>
+				<!-- Сбор в процессе - сбор запущен -->
+				<section class="feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<p class="feed-update-block__text tail__text">
+						Анализ аккаунта в процессе и займет некоторое время. <br />
+						Загляните сюда чуть позже...
+					</p>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn feed-update-block__btn_loading">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Идёт сбор...</span>
+					</button>
+				</section>
+				<!-- Сбор завершен - суточная пауза -->
+				<section class="feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<p class="feed-update-block__text tail__text">Дата обновления: ${DD.MM.YYYY}</p>
+					<p class="feed-update-block__text tail__text">Следующее будет доступно через: ${HH:MM:SS}</p>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>обновить</span>
+					</button>
+				</section>
+				<!-- Повторные анализы - готово к переанализу -->
+				<section class="feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<p class="feed-update-block__text tail__text">Дата обновления: ${DD.MM.YYYY}</p>
+					<button class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>обновить</span>
+					</button>
 				</section>
 
-				<!-- Состояние блока Доабвление аккаунта при поиске и добавлении аккаунта здесь в button добавлен span для смены статусов внутри кнопки-->
-				<section class="add-account-block tail">
-					<h2 class="add-account-block__title tail__title">Анализ активности</h2>
-					<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
-					<div class="add-account-block__form-wrapper form" id="add-account-form">
-						<div class="custom-select add-account-block__select">
-							<div class="custom-select__field-wrapper">
-								<input type="text" class="general-input custom-select__input add-account-block__input" placeholder="@username или ссылка" value="@cheitoaccount" />
-							</div>
-						</div>
+				<p style="margin-bottom: 30px; color: red">Тестовый блок с переключением между датами</p>
 
-						<button disabled class="button button_icon-text button_shadow add-account-block__btn add-account-block__btn_loading">
-							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M2.6665 16.0001C2.6665 23.3641 8.63584 29.3334 15.9998 29.3334C23.3638 29.3334 29.3332 23.3641 29.3332 16.0001C29.3332 8.63608 23.3638 2.66675 15.9998 2.66675" stroke="#595866" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-							<span>Добавить аккаунт</span>
-						</button>
-					</div>
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Запустить анализ</span>
+					</button>
+					<p class="feed-update-block__text tail__text">Запустите первый сбор данных прямо сейчас!</p>
 				</section>
 
-				<!-- Состояние ошибки блока -->
-				<section class="add-account-block tail">
-					<h2 class="add-account-block__title tail__title">Анализ активности</h2>
-					<p class="add-account-block__text tail__text">Для начала анализа добавьте интересующий вас аккаунт. Вставьте ссылку или введите название аккаунта:</p>
-					<div class="add-account-block__form-wrapper form" id="add-account-form">
-						<div class="custom-select add-account-block__select">
-							<div class="custom-select__field-wrapper">
-								<input
-									type="text"
-									class="general-input custom-select__input add-account-block__input error"
-									placeholder="@username или ссылка"
-									value="@cheitoaccount
-                            "
-								/>
-							</div>
+				<!-- Первичное состояние - перед первым запуском -->
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<button class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Запустить анализ</span>
+					</button>
+					<p class="feed-update-block__text tail__text">Запустите первый сбор данных прямо сейчас!</p>
+				</section>
+				<!-- Сбор в процессе - сбор запущен -->
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn feed-update-block__btn_loading">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Идёт сбор...</span>
+					</button>
+					<p class="feed-update-block__text tail__text">
+						Анализ аккаунта в процессе и займет некоторое время. <br />
+						Загляните сюда чуть позже...
+					</p>
+				</section>
+				<!-- Сбор завершен - суточная пауза -->
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>обновить</span>
+					</button>
+					<p class="feed-update-block__text tail__text">Следующее будет доступно через: ${HH:MM:SS}</p>
+					<!-- СЮДА СЛАЙДЕР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+					<div class="feed-update-block__slider">
+						<p class="feed-update-block__slider-title tail__text">Дата обновления:</p>
+						<div class="feed-update-block__slider-wrapper">
+							<p class="feed-update-block__slider-item tail__text">22.11.2023</p>
+							<p class="feed-update-block__slider-item active tail__text">22.11.2023</p>
 						</div>
-
-						<button class="button button_icon-text button_shadow add-account-block__btn error">Ошибка</button>
-						<p class="add-account-block__form-error tail__error">Текст ошибки отображается здесь</p>
+						<div class="feed-update-block__slider-btn swiper-button-prev">
+							<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_prev">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.625 14.25L7.08211 9.70711C6.69158 9.31658 6.69158 8.68342 7.08211 8.29289L11.625 3.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<div class="feed-update-block__slider-btn swiper-button-next">
+							<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_next">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.125 3.75L11.6679 8.29289C12.0584 8.68342 12.0584 9.31658 11.6679 9.70711L7.125 14.25" stroke="#161516" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
 					</div>
+				</section>
+				<!-- Повторные анализы - готово к переанализу -->
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<button class="button button_icon-text button_shadow feed-update-block__btn">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>обновить</span>
+					</button>
+
+					<p class="feed-update-block__text tail__text">Дата обновления: ${DD.MM.YYYY}</p>
 				</section>
 			</div>
 		</section>
@@ -333,6 +376,7 @@
 				<div class="footer__disclaimer">* Принадлежит организации Meta, признанная судом в РФ экстремистской. Данные меры судебной защиты не ограничивают действий по использованию программных продуктов компании Meta физических и юридических лиц, не принимающих участия в запрещенной законом деятельности.</div>
 			</div>
 		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 	</body>
 </html>
