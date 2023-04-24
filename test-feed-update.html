@@ -313,22 +313,22 @@
 						<span>обновить</span>
 					</button>
 					<p class="feed-update-block__text tail__text">Следующее будет доступно через: ${HH:MM:SS}</p>
-					<!-- СЮДА СЛАЙДЕР!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-					<div class="feed-update-block__slider">
+					<div class="feed-update-block__slider swiper">
 						<p class="feed-update-block__slider-title tail__text">Дата обновления:</p>
-						<div class="feed-update-block__slider-wrapper">
-							<p class="feed-update-block__slider-item tail__text">22.11.2023</p>
-							<p class="feed-update-block__slider-item active tail__text">22.11.2023</p>
+						<div class="feed-update-block__slider-wrapper swiper-wrapper">
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
 						</div>
-						<div class="feed-update-block__slider-btn swiper-button-prev">
-							<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_prev">
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_prev">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-prev">
 								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11.625 14.25L7.08211 9.70711C6.69158 9.31658 6.69158 8.68342 7.08211 8.29289L11.625 3.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
 							</button>
 						</div>
-						<div class="feed-update-block__slider-btn swiper-button-next">
-							<button class="button button_icony button_icony-24 target-info__control-btn target-info__control-btn_arrows target-info__control-btn_next">
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_next">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-next">
 								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M7.125 3.75L11.6679 8.29289C12.0584 8.68342 12.0584 9.31658 11.6679 9.70711L7.125 14.25" stroke="#161516" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
@@ -346,7 +346,66 @@
 						<span>обновить</span>
 					</button>
 
-					<p class="feed-update-block__text tail__text">Дата обновления: ${DD.MM.YYYY}</p>
+					<div class="feed-update-block__slider swiper">
+						<p class="feed-update-block__slider-title tail__text">Дата обновления:</p>
+						<div class="feed-update-block__slider-wrapper swiper-wrapper">
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+						</div>
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_prev">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-prev">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.625 14.25L7.08211 9.70711C6.69158 9.31658 6.69158 8.68342 7.08211 8.29289L11.625 3.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_next">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-next">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.125 3.75L11.6679 8.29289C12.0584 8.68342 12.0584 9.31658 11.6679 9.70711L7.125 14.25" stroke="#161516" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- Переанализ в процессе -->
+				<section class="test-feed-update-block tail">
+					<h2 class="feed-update-block__title tail__title">Анализ активности</h2>
+					<button disabled class="button button_icon-text button_shadow feed-update-block__btn feed-update-block__btn_loading">
+						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.11719 6.95599L2.70818 9.71167L5.46385 8.12068M16.8815 11.044L15.2905 8.28833L12.5348 9.87932M14.9993 9C14.9993 12.3137 12.3131 15 8.99935 15C7.35497 15 5.86509 14.3385 4.7813 13.2671M2.99935 9C2.99935 5.68629 5.68564 3 8.99935 3C10.6556 3 12.1551 3.67106 13.2407 4.75611" stroke="#161516" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+						<span>Идёт сбор...</span>
+					</button>
+					<p class="feed-update-block__text tail__text">
+						Анализ аккаунта в процессе и займет некоторое время. <br />
+						Загляните сюда чуть позже...
+					</p>
+
+					<div class="feed-update-block__slider swiper">
+						<p class="feed-update-block__slider-title tail__text">Дата обновления:</p>
+						<div class="feed-update-block__slider-wrapper swiper-wrapper">
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+							<p class="feed-update-block__slider-item tail__text swiper-slide">DD.MM.YYYY</p>
+						</div>
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_prev">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-prev">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.625 14.25L7.08211 9.70711C6.69158 9.31658 6.69158 8.68342 7.08211 8.29289L11.625 3.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+						<div class="feed-update-block__slider-btn feed-update-block__slider-btn_next">
+							<button class="button button_icony button_icony-24 feed-update-block__slider-next">
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.125 3.75L11.6679 8.29289C12.0584 8.68342 12.0584 9.31658 11.6679 9.70711L7.125 14.25" stroke="#161516" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
 				</section>
 			</div>
 		</section>

@@ -137,4 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
         //     sticky: true,
         // },
     });
+
+    const updateDataSlider = new Swiper('.feed-update-block__slider', {
+
+        // autoHeight: true,
+
+        slidesPerView: "auto",
+        centeredSlides: true,
+        slideActiveClass: 'active',
+        slideToClickedSlide: true,
+
+        navigation: {
+            nextEl: '.feed-update-block__slider-next',
+            prevEl: '.feed-update-block__slider-prev',
+        },
+    });
 });
