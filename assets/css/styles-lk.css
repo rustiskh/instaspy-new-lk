@@ -3451,7 +3451,9 @@ select.general-input {
   border: 1px solid var(--color-green-deep);
   border-radius: 4px;
 }
-.tutorial-section__text {
+.tutorial-section__text,
+.tutorial-section ul,
+.tutorial-section ol {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -3459,15 +3461,23 @@ select.general-input {
   margin-top: 12px;
 }
 @media (min-width: 1114px) {
-  .tutorial-section__text {
+  .tutorial-section__text,
+  .tutorial-section ul,
+  .tutorial-section ol {
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
   }
 }
-.tutorial-section__text a {
+.tutorial-section__text a,
+.tutorial-section ul a,
+.tutorial-section ol a {
   color: var(--color-black-16);
   text-decoration: underline;
+}
+.tutorial-section ul,
+.tutorial-section ol {
+  list-style-position: inside;
 }
 .tutorial-section__img-wrapper {
   width: -webkit-fit-content;
@@ -3532,7 +3542,9 @@ select.general-input {
   border: 1px solid var(--color-green-deep);
   border-radius: 4px;
 }
-.tutorial-subsection__text {
+.tutorial-subsection__text,
+.tutorial-subsection ul,
+.tutorial-subsection ol {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -3540,15 +3552,23 @@ select.general-input {
   margin-top: 12px;
 }
 @media (min-width: 1114px) {
-  .tutorial-subsection__text {
+  .tutorial-subsection__text,
+  .tutorial-subsection ul,
+  .tutorial-subsection ol {
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
   }
 }
-.tutorial-subsection__text a {
+.tutorial-subsection__text a,
+.tutorial-subsection ul a,
+.tutorial-subsection ol a {
   color: var(--color-black-16);
   text-decoration: underline;
+}
+.tutorial-subsection ul,
+.tutorial-subsection ol {
+  list-style-position: inside;
 }
 .tutorial-subsection__img-wrapper {
   width: -webkit-fit-content;

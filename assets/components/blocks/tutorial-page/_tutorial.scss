@@ -85,7 +85,9 @@
 			border-radius: 4px;
 		}
 
-		&__text {
+		&__text,
+		ul,
+		ol {
 			font-weight: 400;
 			font-size: 13px;
 			line-height: 18px;
@@ -102,6 +104,11 @@
 				color: color(black-16);
 				text-decoration: underline;
 			}
+		}
+
+		ul,
+		ol {
+			list-style-position: inside;
 		}
 
 		&__img-wrapper {
@@ -167,7 +174,9 @@
 			border-radius: 4px;
 		}
 
-		&__text {
+		&__text,
+		ul,
+		ol {
 			font-weight: 400;
 			font-size: 13px;
 			line-height: 18px;
@@ -184,6 +193,11 @@
 				color: color(black-16);
 				text-decoration: underline;
 			}
+		}
+
+		ul,
+		ol {
+			list-style-position: inside;
 		}
 
 		&__img-wrapper {
