@@ -1950,6 +1950,10 @@ select.general-input {
 .feed-status__notification {
   margin-top: 24px;
 }
+.feed-status__fans {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
 
 .feed-footer {
   border-top: 1px solid var(--color-gray-e1);
