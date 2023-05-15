@@ -656,6 +656,14 @@ select.general-input {
   line-height: 17px;
   color: var(--color-red-deepest);
 }
+.tail__error-span {
+  font-weight: 600;
+}
+.tail__error-link {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: underline;
+}
 
 .system-info {
   padding: 12px 16px;
