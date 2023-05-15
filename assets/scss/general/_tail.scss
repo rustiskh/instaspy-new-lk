@@ -34,5 +34,15 @@
 		font-size: 14px;
 		line-height: 17px;
 		color: color(red-deepest);
+
+		&-span {
+			font-weight: 600;
+		}
+
+		&-link {
+			font-weight: 700;
+			color: inherit;
+			text-decoration: underline;
+		}
 	}
 }
