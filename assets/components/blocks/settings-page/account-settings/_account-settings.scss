@@ -75,5 +75,13 @@
 			color: color(red-deepest);
 			margin-top: 16px;
 		}
+
+		&-success {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+			color: color(green-deepest);
+			margin-top: 16px;
+		}
 	}
 }
