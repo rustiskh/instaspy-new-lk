@@ -3262,6 +3262,13 @@ select.general-input {
   color: var(--color-red-deepest);
   margin-top: 16px;
 }
+.account-settings__form-success {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-green-deepest);
+  margin-top: 16px;
+}
 
 .target-managment__title {
   font-weight: 700;
